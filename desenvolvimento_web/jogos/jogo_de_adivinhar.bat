@@ -64,7 +64,7 @@ color 0b
         cls
         goto :solicitar_palpite
     )
-goto :eof
+    goto :eof
 
 
 :verificar_palpite   
