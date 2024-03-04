@@ -50,6 +50,8 @@ color 0b
         echo --------------------------------------------------------
         echo    Erro! Por favor, digite um numero entre 1 e 50.
         echo --------------------------------------------------------
+        set /p palpite=Digite o seu palpite: 
+        goto:validar_entrada_palpite
         pause
         cls
         goto :solicitar_palpite
@@ -60,6 +62,8 @@ color 0b
         echo --------------------------------------------------------
         echo    Erro! Por favor, digite um numero entre 1 e 50.
         echo --------------------------------------------------------
+        set /p palpite=Digite o seu palpite: 
+        goto:validar_entrada_palpite
         pause
         cls
         goto :solicitar_palpite
