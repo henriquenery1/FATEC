@@ -9,6 +9,8 @@ color 0b
     echo.  
 
 :solicitar_palpite
+    call:verificar_tentativa
+
     echo                       ,,,                              
     echo                      (o o)                            
     echo           -------oOO--( )--OOo-------
@@ -24,12 +26,13 @@ color 0b
         echo.
     )
 
-    set /p palpite=Digite o seu palpite: 
+    set /p palpite=Digite o seu palpite:
+    call:validar_entrada_palpite
+
     goto:verificar_palpite
 
 
-:verificar_palpite 
-
+:verificar_tentativa
     if %tentativas% == 0 (
         echo.
         echo ------------------------------------------------------
@@ -37,31 +40,34 @@ color 0b
         echo ------------------------------------------------------
         echo. 
         pause
-        cls
         goto:verificar_continuidade_jogo  
-    )    
+    )
+    goto:eof
 
+:validar_entrada_palpite
     if %palpite% GTR 50 (
         echo.
-        echo ------------------------------------------------------
-        echo   Opcao Invalida! Digite um numero menor que 50
-        echo ------------------------------------------------------
+        echo --------------------------------------------------------
+        echo    Erro! Por favor, digite um numero entre 1 e 50.
+        echo --------------------------------------------------------
         pause
         cls
-        goto:solicitar_palpite
-        
+        goto :solicitar_palpite
     ) 
 
     if %palpite% LSS 1 (
         echo.
-        echo ------------------------------------------------------
-        echo   Opcao Invalida! Digite um numero maior que 1
-        echo ------------------------------------------------------
+        echo --------------------------------------------------------
+        echo    Erro! Por favor, digite um numero entre 1 e 50.
+        echo --------------------------------------------------------
         pause
         cls
-        goto:solicitar_palpite
-    ) 
-           
+        goto :solicitar_palpite
+    )
+goto :eof
+
+
+:verificar_palpite   
     if %palpite% == %numero_sorteado% (
         echo.
         echo ------------------------------------------------------
@@ -105,10 +111,9 @@ color 0b
         echo             Opcao invalida digite S ou N
         echo ---------------------------------------------------------
         pause
-        goto:verificar_continuidade_jogo)
+        goto:verificar_continuidade_jogo) 
 
 :exibir_palpites_anteriores
-
     if %tentativas% == 4 (
         set /a primeiro_palpite=%palpite%
         echo Numero jogado: %palpite%
