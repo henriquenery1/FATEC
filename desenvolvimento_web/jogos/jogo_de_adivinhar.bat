@@ -8,7 +8,7 @@ color 0b
     set /a numero_sorteado=(%random% %% 50) + 1
     echo.  
 
-:palpite
+:solicitar_palpite
     echo                       ,,,                              
     echo                      (o o)                            
     echo           -------oOO--( )--OOo-------
@@ -48,7 +48,7 @@ color 0b
         echo ------------------------------------------------------
         pause
         cls
-        goto:palpite
+        goto:solicitar_palpite
         
     ) 
 
@@ -59,7 +59,7 @@ color 0b
         echo ------------------------------------------------------
         pause
         cls
-        goto:palpite
+        goto:solicitar_palpite
     ) 
            
     if %palpite% == %numero_sorteado% (
@@ -81,7 +81,7 @@ color 0b
         set /a tentativas=%tentativas% - 1
         pause
         cls
-        goto:palpite
+        goto:solicitar_palpite
     )
     
     if %palpite% GTR %numero_sorteado% (
@@ -92,7 +92,7 @@ color 0b
         set /a tentativas=%tentativas% - 1
         pause
         cls
-        goto:palpite
+        goto:solicitar_palpite
     )
 
 :verificar_continuidade_jogo
