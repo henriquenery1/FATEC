@@ -6,11 +6,6 @@ color 0b
 :inicio
     set /a tentativas = 5
     set /a numero_sorteado=(%random% %% 50) + 1
-    set /a primeiro_palpite = 0
-    set /a segundo_palpite = 0
-    set /a terceiro_palpite = 0
-    set /a quarto_palpite = 0
-    set /a quinto_palpite = 0
     echo.  
 
 :palpite
@@ -22,13 +17,18 @@ color 0b
     echo            Quantidade de tentativas: %tentativas%
     echo ------------------------------------------------------
     echo       ADIVINHE O NUMERO SORTEADO ENTRE 1 E 50
-    echo.
+    echo ------------------------------------------------------ 
+
+    if %tentativas% LSS 5 (
+        call:exibir_palpites_anteriores
+        echo.
+    )
+
     set /p palpite=Digite o seu palpite: 
-    set /a primeiro_palpite = %palpite%
     goto:verificar_palpite
 
 
-:verificar_palpite
+:verificar_palpite 
 
     if %tentativas% == 0 (
         echo.
@@ -76,7 +76,7 @@ color 0b
     if %palpite% LSS %numero_sorteado% (
         echo.
         echo ------------------------------------------------------
-        echo              Digite um numero maior
+        echo           O numero sorteado maior que %palpite% 
         echo ------------------------------------------------------
         set /a tentativas=%tentativas% - 1
         pause
@@ -87,7 +87,7 @@ color 0b
     if %palpite% GTR %numero_sorteado% (
         echo.
         echo ------------------------------------------------------
-        echo              Digite um numero menor
+        echo           O numero sorteado menor que %palpite% 
         echo ------------------------------------------------------
         set /a tentativas=%tentativas% - 1
         pause
@@ -106,3 +106,25 @@ color 0b
         echo ---------------------------------------------------------
         pause
         goto:verificar_continuidade_jogo)
+
+:exibir_palpites_anteriores
+
+    if %tentativas% == 4 (
+        set /a primeiro_palpite=%palpite%
+        echo Numero jogado: %palpite%
+    )
+
+    if %tentativas% == 3 (
+        set /a segundo_palpite=%palpite%
+        echo Numeros jogados: %primeiro_palpite% %palpite%
+    )
+
+    if %tentativas% == 2 (
+        set /a terceiro_palpite=%palpite%
+        echo Numeros jogados: %primeiro_palpite% %segundo_palpite% %palpite%
+    )
+
+    if %tentativas% == 1 (
+        set /a quarto_palpite=%palpite%
+        echo Numeros jogados: %primeiro_palpite% %segundo_palpite% %terceiro_palpite% %palpite%
+    )
