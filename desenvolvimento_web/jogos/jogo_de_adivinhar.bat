@@ -30,6 +30,17 @@ color 0b
 
 :verificar_palpite
 
+    if %tentativas% == 0 (
+        echo.
+        echo ------------------------------------------------------
+        echo       VOCE PERDEU! O numero sorteado era: %numero_sorteado%
+        echo ------------------------------------------------------
+        echo. 
+        pause
+        cls
+        goto:verificar_continuidade_jogo  
+    )    
+
     if %palpite% GTR 50 (
         echo.
         echo ------------------------------------------------------
@@ -59,7 +70,7 @@ color 0b
         echo. 
         pause
         cls
-        goto:sair     
+        goto:verificar_continuidade_jogo     
     )   
 
     if %palpite% LSS %numero_sorteado% (
@@ -83,3 +94,15 @@ color 0b
         cls
         goto:palpite
     )
+
+:verificar_continuidade_jogo
+    cls
+    set /p ext=Deseja jogar novamente? (S/N) : 
+    if /i %ext% == s (goto:inicio)
+    if /i %ext% == n (goto:inicio) else (
+        echo.
+        echo ---------------------------------------------------------
+        echo             Opcao invalida digite S ou N
+        echo ---------------------------------------------------------
+        pause
+        goto:verificar_continuidade_jogo)
