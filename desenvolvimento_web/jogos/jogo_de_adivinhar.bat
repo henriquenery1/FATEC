@@ -26,7 +26,7 @@ color 0b
         echo.
     )
 
-    set /p palpite=Digite o seu palpite:
+    set /p palpite=Digite o seu palpite: 
     call:validar_entrada_palpite
 
     goto:verificar_palpite
@@ -130,6 +130,5 @@ color 0b
     )
 
     if %tentativas% == 1 (
-        set /a quarto_palpite=%palpite%
         echo Numeros jogados: %primeiro_palpite% %segundo_palpite% %terceiro_palpite% %palpite%
     )
