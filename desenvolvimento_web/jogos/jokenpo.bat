@@ -15,7 +15,7 @@ title Jo-Ken-Po
 
     set /p opcao=Escolha uma opcao: 
     if %opcao% == 1 (goto:jogo)
-    if %opcao% == 2 (goto:regras)
+    if %opcao% == 2 (goto:exibir_regras)
     if %opcao% == 3 (exit) else (
         call:exibir_mensagem_opcao_invalida
         pause
@@ -153,7 +153,7 @@ title Jo-Ken-Po
     echo.
     goto :eof
 
-:exibir_menu_inicial
+:exibir_menu_principal
     cls
     echo                     ,,,                              
     echo                    (o o)                            
