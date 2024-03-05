@@ -10,25 +10,16 @@ title JOGO DE ADIVINHAR
 :solicitar_palpite
     color 0b
 
-    echo                       ,,,                              
-    echo                      (o o)                            
-    echo           -------oOO--( )--OOo-------
-    echo            Desenvolvido por Henrique
-    echo.
-    echo            Quantidade de tentativas: %tentativas%
-    echo ------------------------------------------------------
-    echo       ADIVINHE O NUMERO SORTEADO ENTRE 1 E 50
-    echo ------------------------------------------------------ 
+    call :exibir_banner_jogo
 
     if %tentativas% LSS 5 (
-        call:exibir_palpites_anteriores
-        echo.
+        call :exibir_palpites_anteriores
     )
 
     set /p palpite=Digite o seu palpite: 
-    call:validar_entrada_palpite
+    call :validar_entrada_palpite
 
-    goto:verificar_palpite
+    goto :verificar_palpite
 
 
 :verificar_tentativa
@@ -120,6 +111,18 @@ title JOGO DE ADIVINHAR
         pause
         goto:verificar_continuidade_jogo) 
 
+:exibir_banner_jogo
+    echo                       ,,,                              
+    echo                      (o o)                            
+    echo           -------oOO--( )--OOo-------
+    echo            Desenvolvido por Henrique
+    echo.
+    echo            Quantidade de tentativas: %tentativas%
+    echo ------------------------------------------------------
+    echo       ADIVINHE O NUMERO SORTEADO ENTRE 1 E 50
+    echo ------------------------------------------------------
+    goto :eof
+
 :exibir_palpites_anteriores
     if %tentativas% == 4 (
         set /a primeiro_palpite=%palpite%
@@ -140,4 +143,5 @@ title JOGO DE ADIVINHAR
         echo Numeros jogados: %primeiro_palpite% %segundo_palpite% %terceiro_palpite% %palpite%
     )
 
+    echo.
     set /a palpite=0
