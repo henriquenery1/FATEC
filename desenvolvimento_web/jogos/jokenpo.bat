@@ -3,7 +3,7 @@ title Jo-Ken-Po
 
 :inicio
     mode 70,35
-    color 0b
+    color 09
 
     call :exibir_jokenpo
 
