@@ -9,7 +9,6 @@ title JOGO DE ADIVINHAR
 
 :solicitar_palpite
     color 0b
-    call:verificar_tentativa
 
     echo                       ,,,                              
     echo                      (o o)                            
@@ -33,7 +32,7 @@ title JOGO DE ADIVINHAR
 
 
 :verificar_tentativa
-    if %tentativas% == 0 (
+    if %tentativas% == 1 (
         color 0c
         echo.
         echo ------------------------------------------------------
@@ -73,6 +72,8 @@ title JOGO DE ADIVINHAR
 
 
 :verificar_palpite   
+    call:verificar_tentativa
+
     if %palpite% == %numero_sorteado% (
         color 0a
         echo.
@@ -111,7 +112,7 @@ title JOGO DE ADIVINHAR
     cls
     set /p ext=Deseja jogar novamente? (S/N) : 
     if /i %ext% == s (goto:inicio)
-    if /i %ext% == n (goto:inicio) else (
+    if /i %ext% == n (exit) else (
         echo.
         echo ---------------------------------------------------------
         echo             Opcao invalida digite S ou N
