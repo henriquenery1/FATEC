@@ -37,30 +37,13 @@ title JOGO DE ADIVINHAR
 
 :validar_entrada_palpite
     if %palpite% GTR 50 (
-        echo.
-        echo --------------------------------------------------------
-        echo    Erro! Por favor, digite um numero entre 1 e 50.
-        echo --------------------------------------------------------
-        set /p palpite=Digite o seu palpite: 
-        goto :validar_entrada_palpite
-        pause
-        cls
-        goto :solicitar_palpite
+        call :exibir_erro_numero_invalido
     ) 
 
     if %palpite% LSS 1 (
-        echo.
-        echo --------------------------------------------------------
-        echo    Erro! Por favor, digite um numero entre 1 e 50.
-        echo --------------------------------------------------------
-        set /p palpite=Digite o seu palpite: 
-        goto :validar_entrada_palpite
-        pause
-        cls
-        goto :solicitar_palpite
+        call :exibir_erro_numero_invalido
     )
     goto :eof
-
 
 :verificar_palpite   
     call :verificar_tentativa
@@ -145,3 +128,15 @@ title JOGO DE ADIVINHAR
 
     echo.
     set /a palpite=0
+    goto :eof
+
+:exibir_erro_numero_invalido
+    echo.
+    echo --------------------------------------------------------
+    echo    Erro! Por favor, digite um numero entre 1 e 50.
+    echo --------------------------------------------------------
+    set /p palpite=Digite o seu palpite: 
+    goto :validar_entrada_palpite
+    pause
+    cls
+    goto :solicitar_palpite
