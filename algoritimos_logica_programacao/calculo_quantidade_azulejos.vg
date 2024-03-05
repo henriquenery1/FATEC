@@ -1,0 +1,28 @@
+Algoritmo "Quantidade_Azulejos"
+
+Var
+   altura_azulejo, largura_azulejo, altura_parede, largura_parede: real
+   area_azulejo, area_parede: real 
+   quantidade_azulejos: real
+
+Inicio
+   Escreva("Digite a altura do azulejo: ")
+   Leia(altura_azulejo)
+   
+   Escreva("Digite a largura do azulejo: ")
+   Leia(largura_azulejo)
+   
+   Escreva("Digite a altura da parede: ")
+   Leia(altura_parede)
+   
+   Escreva("Digite a largura da parede: ")
+   Leia(largura_parede)
+   
+   area_azulejo <- altura_azulejo * largura_azulejo
+   area_parede <- altura_parede * largura_parede
+   
+   quantidade_azulejos <- area_parede / area_azulejo
+   
+   Escreva("Quantidade de azulejos necessários: ", quantidade_azulejos)
+   
+FimAlgoritmo
