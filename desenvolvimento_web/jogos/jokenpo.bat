@@ -14,14 +14,14 @@ title Jo-Ken-Po
     call :exibir_menu_principal
 
     set /p opcao=Escolha uma opcao: 
-    if %opcao% == 1 (goto:game)
+    if %opcao% == 1 (goto:jogo)
     if %opcao% == 2 (goto:regras)
     if %opcao% == 3 (exit) else (
         call:exibir_mensagem_opcao_invalida
         pause
         goto:menu)
 
-:game
+:jogo
     cls
     call :exibir_jokenpo
     call :exibir_opcoes_jogador
@@ -31,8 +31,8 @@ title Jo-Ken-Po
     set /a escolha_computador=%random% %% 5 + 1
 
     if %escolha_jogador% == 6 goto:menu
-    if %escolha_jogador% lss 1 goto:game
-    if %escolha_jogador% gtr 5 goto:game
+    if %escolha_jogador% lss 1 goto:jogo
+    if %escolha_jogador% gtr 5 goto:jogo
 
     if %escolha_jogador% == 1 set escolha_jogador_txt=Pedra
     if %escolha_jogador% == 2 set escolha_jogador_txt=Papel
@@ -175,7 +175,7 @@ title Jo-Ken-Po
     set /p opcao_jogo=Escolha uma opcao: 
 
     if "%opcao_jogo%" == "1" goto :menu
-    if "%opcao_jogo%" == "2" goto :game
+    if "%opcao_jogo%" == "2" goto :jogo
 
     echo Opcao invalida!
     pause
