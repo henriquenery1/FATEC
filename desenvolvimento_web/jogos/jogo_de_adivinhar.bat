@@ -3,7 +3,7 @@ title JOGO DE ADIVINHAR
 
 :inicio
     mode 70,35
-    set /a tentativas = 5
+    set /a tentativas=5
     set /a numero_sorteado=(%random% %% 50) + 1
     echo.  
 
@@ -31,9 +31,9 @@ title JOGO DE ADIVINHAR
         echo ------------------------------------------------------
         echo. 
         pause
-        goto:verificar_continuidade_jogo  
+        goto :verificar_continuidade_jogo  
     )
-    goto:eof
+    goto :eof
 
 :validar_entrada_palpite
     if %palpite% GTR 50 (
@@ -42,7 +42,7 @@ title JOGO DE ADIVINHAR
         echo    Erro! Por favor, digite um numero entre 1 e 50.
         echo --------------------------------------------------------
         set /p palpite=Digite o seu palpite: 
-        goto:validar_entrada_palpite
+        goto :validar_entrada_palpite
         pause
         cls
         goto :solicitar_palpite
@@ -54,7 +54,7 @@ title JOGO DE ADIVINHAR
         echo    Erro! Por favor, digite um numero entre 1 e 50.
         echo --------------------------------------------------------
         set /p palpite=Digite o seu palpite: 
-        goto:validar_entrada_palpite
+        goto :validar_entrada_palpite
         pause
         cls
         goto :solicitar_palpite
@@ -63,7 +63,7 @@ title JOGO DE ADIVINHAR
 
 
 :verificar_palpite   
-    call:verificar_tentativa
+    call :verificar_tentativa
 
     if %palpite% == %numero_sorteado% (
         color 0a
@@ -74,7 +74,7 @@ title JOGO DE ADIVINHAR
         echo. 
         pause
         cls
-        goto:verificar_continuidade_jogo     
+        goto :verificar_continuidade_jogo     
     )   
 
     if %palpite% LSS %numero_sorteado% (
@@ -85,7 +85,7 @@ title JOGO DE ADIVINHAR
         set /a tentativas=%tentativas% - 1
         pause
         cls
-        goto:solicitar_palpite
+        goto :solicitar_palpite
     )
     
     if %palpite% GTR %numero_sorteado% (
@@ -96,20 +96,20 @@ title JOGO DE ADIVINHAR
         set /a tentativas=%tentativas% - 1
         pause
         cls
-        goto:solicitar_palpite
+        goto :solicitar_palpite
     )
 
 :verificar_continuidade_jogo
     cls
     set /p ext=Deseja jogar novamente? (S/N) : 
-    if /i %ext% == s (goto:inicio)
+    if /i %ext% == s (goto :inicio)
     if /i %ext% == n (exit) else (
         echo.
         echo ---------------------------------------------------------
         echo             Opcao invalida digite S ou N
         echo ---------------------------------------------------------
         pause
-        goto:verificar_continuidade_jogo) 
+        goto :verificar_continuidade_jogo) 
 
 :exibir_banner_jogo
     echo                       ,,,                              
