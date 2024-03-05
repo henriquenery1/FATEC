@@ -1,6 +1,6 @@
 # Estudos e Atividades 
 
-Seja bem-vindo ao repositório de Estudos e Atividades! Aqui você encontrará uma coleção de projetos, tarefas e estudos realizados durante o curso de desenvolvimento de software.
+Seja bem-vindo aqui você encontrará uma coleção de projetos, tarefas e estudos realizados durante o curso de desenvolvimento de software.
 
 ## 📚 Visão Geral
 
