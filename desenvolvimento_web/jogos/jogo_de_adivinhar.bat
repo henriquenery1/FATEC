@@ -139,3 +139,5 @@ title JOGO DE ADIVINHAR
     if %tentativas% == 1 (
         echo Numeros jogados: %primeiro_palpite% %segundo_palpite% %terceiro_palpite% %palpite%
     )
+
+    set /a palpite=0
