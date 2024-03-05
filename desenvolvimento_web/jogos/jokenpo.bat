@@ -14,30 +14,27 @@ title Jo-Ken-Po
     echo      \____/\____/     /_/  \__\___/_/ /_/     /_/    \____/   
     echo.
 
-    set /p user=Digite seu nome: 
+    set /p nome_jogador=Digite seu nome: 
     goto:menu
 
 :menu
     cls
-    echo                     ,,,                              
-    echo                    (o o)                            
-    echo          ------oOO--( )--OOo------
-    echo          Seja bem-vindo(a) %user%!
+    echo                   ,,,                              
+    echo                  (o o)                            
+    echo         -----oOO--( )--OOo-----
+    echo          Seja bem-vindo(a) %nome_jogador%!
     echo.
-    echo --------------------------------------------------------
+    echo -----------------------------------------------
     echo [1] Iniciar o jogo
     echo [2] Regras
     echo [3] Sair
-    echo --------------------------------------------------------
+    echo -----------------------------------------------
 
     set /p opcao=Escolha uma opcao: 
     if %opcao% == 1 (goto:game)
     if %opcao% == 2 (goto:regras)
     if %opcao% == 3 (exit) else (
-        echo.
-        echo --------------------
-        echo   Opcao invalida!
-        echo --------------------
+        call:exibir_mensagem_opcao_invalida
         pause
         goto:menu)
 
@@ -56,7 +53,7 @@ title Jo-Ken-Po
     echo        -            Ganha de pedra e Spock;       -
     echo        -            Perde de tesoura e lagarto;   -
     echo        -                                          -
-    echo        -   Tesoura: Empata com tesoura;           -                       
+    echo        -   Tesoura: Empata com tesoura;           -
     echo        -            Ganha de lagarto e papel;     -
     echo        -            Perde de Pedra e Spock;       -
     echo        -                                          -
@@ -76,10 +73,15 @@ title Jo-Ken-Po
     set /p regra_opcao=Escolha uma opcao: 
     echo.
     if %regra_opcao% == 1 (goto:menu)
-    if %regra_opcao% == 2 (goto:game) else (
-        echo.
-        echo --------------------
-        echo   Opcao invalida!
-        echo --------------------
+    if %regra_opcao% == 2 (goto:game) 
+    else (
+        call:exibir_mensagem_opcao_invalida
         pause
-        goto:regras)
+        goto:regras
+        )
+
+:exibir_mensagem_opcao_invalida
+    echo.
+    echo --------------------
+    echo   Opcao invalida!
+    echo --------------------
