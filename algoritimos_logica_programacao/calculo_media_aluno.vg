@@ -1,0 +1,24 @@
+Algoritmo "Calculo_Media"
+
+Var
+   nome_usuario: caractere
+   nota1, nota2, nota3, media: real
+
+Inicio
+   Escreva("Digite o nome do aluno: ")
+   Leia(nome_usuario)
+
+   Escreva("Digite a primeira nota de ", nome_usuario, ": ")
+   Leia(nota1)
+
+   Escreva("Digite a segunda nota de ", nome_usuario, ": ")
+   Leia(nota2)
+
+   Escreva("Digite a terceira nota de ", nome_usuario, ": ")
+   Leia(nota3)
+
+   media <- (nota1 + nota2 + nota3) / 3
+
+   Escreval("A média do aluno: ", nome_usuario, "é: ", media)
+
+FimAlgoritmo
