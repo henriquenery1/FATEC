@@ -11,17 +11,7 @@ title Jo-Ken-Po
     goto:menu
 
 :menu
-    cls
-    echo                     ,,,                              
-    echo                    (o o)                            
-    echo         -------oOO--( )--OOo-------
-    echo          Seja bem-vindo(a) %nome_jogador%!
-    echo.
-    echo -----------------------------------------------
-    echo [1] Iniciar o jogo
-    echo [2] Regras
-    echo [3] Sair
-    echo -----------------------------------------------
+    call :exibir_menu_principal
 
     set /p opcao=Escolha uma opcao: 
     if %opcao% == 1 (goto:game)
@@ -30,45 +20,6 @@ title Jo-Ken-Po
         call:exibir_mensagem_opcao_invalida
         pause
         goto:menu)
-
-:exibir_regras
-    cls
-    echo.
-    echo                           ( o o )
-    echo        +-------------oooO---(_)---Oooo-------------+
-    echo        -                                           -
-    echo        -            Regras do Jo-Ken-Po            -
-    echo        -                                           -
-    echo        -   Pedra:   Empata com Pedra;              -
-    echo        -            Ganha de tesoura e lagarto;    -
-    echo        -            Perde de papel e Spock;        -
-    echo        -                                           -
-    echo        -   Papel:   Empata com papel;              -
-    echo        -            Ganha de pedra e Spock;        -
-    echo        -            Perde de tesoura e lagarto;    -
-    echo        -                                           -
-    echo        -   Tesoura: Empata com tesoura;            -
-    echo        -            Ganha de lagarto e papel;      -
-    echo        -            Perde de Pedra e Spock;        -
-    echo        -                                           -
-    echo        -   Lagarto: Empata com lagarto;            -
-    echo        -            Ganha de papel e Spock;        -
-    echo        -            Perde de pedra e tesoura;      -
-    echo        -                                           -
-    echo        -   Spock:   Empata com Spock;              -
-    echo        -            Ganha de pedra e tesoura;      -
-    echo        -            Perde de lagarto e papel.      -
-    echo        -                                           -
-    echo        +--------------------(_)--------------------+ 
-    echo.
-    call :exibir_voltar_menu_ou_jogar
-
-:exibir_mensagem_opcao_invalida
-    echo.
-    echo --------------------
-    echo   Opcao invalida!
-    echo --------------------
-    goto :eof
 
 :game
     cls
@@ -149,6 +100,46 @@ title Jo-Ken-Po
     pause
     goto:menu
 
+:exibir_regras
+    cls
+    echo.
+    echo                           ( o o )
+    echo        +-------------oooO---(_)---Oooo-------------+
+    echo        -                                           -
+    echo        -            Regras do Jo-Ken-Po            -
+    echo        -                                           -
+    echo        -   Pedra:   Empata com Pedra;              -
+    echo        -            Ganha de tesoura e lagarto;    -
+    echo        -            Perde de papel e Spock;        -
+    echo        -                                           -
+    echo        -   Papel:   Empata com papel;              -
+    echo        -            Ganha de pedra e Spock;        -
+    echo        -            Perde de tesoura e lagarto;    -
+    echo        -                                           -
+    echo        -   Tesoura: Empata com tesoura;            -
+    echo        -            Ganha de lagarto e papel;      -
+    echo        -            Perde de Pedra e Spock;        -
+    echo        -                                           -
+    echo        -   Lagarto: Empata com lagarto;            -
+    echo        -            Ganha de papel e Spock;        -
+    echo        -            Perde de pedra e tesoura;      -
+    echo        -                                           -
+    echo        -   Spock:   Empata com Spock;              -
+    echo        -            Ganha de pedra e tesoura;      -
+    echo        -            Perde de lagarto e papel.      -
+    echo        -                                           -
+    echo        +--------------------(_)--------------------+ 
+    echo.
+    call :exibir_voltar_menu_ou_jogar
+
+:exibir_mensagem_opcao_invalida
+    echo.
+    echo --------------------
+    echo   Opcao invalida!
+    echo --------------------
+    goto :eof
+
+
 :exibir_jokenpo
     cls
     echo.
@@ -161,6 +152,21 @@ title Jo-Ken-Po
     echo    ----------------------------------------------------------
     echo.
     goto :eof
+
+:exibir_menu_inicial
+    cls
+    echo                     ,,,                              
+    echo                    (o o)                            
+    echo         -------oOO--( )--OOo-------
+    echo          Seja bem-vindo(a) %nome_jogador%!
+    echo.
+    echo -----------------------------------------------
+    echo [1] Iniciar o jogo
+    echo [2] Regras
+    echo [3] Sair
+    echo -----------------------------------------------
+    goto :eof
+
 
 :exibir_voltar_menu_ou_jogar
     echo [1] VOLTAR AO MENU PRINCIPAL
