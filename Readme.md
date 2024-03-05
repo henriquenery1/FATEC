@@ -1,10 +1,10 @@
 # Estudos e Atividades 
 
-Seja bem-vindo aqui você encontrará uma coleção de projetos, tarefas e estudos realizados durante o curso de desenvolvimento de software.
+Bem-vindo! Este é um espaço dedicado a projetos, tarefas e estudos elaborados durante a minha jornada acadêmica em Desenvolvimento de Software.
 
 ## 📚 Visão Geral
 
-Este repositório serve como um registro de todo o trabalho realizado ao longo da minha jornada.
+Este repositório serve como um registro de todo o trabalho realizado.
 
 ## 🤝 Contribuições
 
