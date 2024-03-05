@@ -1,14 +1,14 @@
 @echo off
 title JOGO DE ADIVINHAR
-mode 70,35
-color 0b
 
 :inicio
+    mode 70,35
     set /a tentativas = 5
     set /a numero_sorteado=(%random% %% 50) + 1
     echo.  
 
 :solicitar_palpite
+    color 0b
     call:verificar_tentativa
 
     echo                       ,,,                              
@@ -34,6 +34,7 @@ color 0b
 
 :verificar_tentativa
     if %tentativas% == 0 (
+        color 0c
         echo.
         echo ------------------------------------------------------
         echo       VOCE PERDEU! O numero sorteado era: %numero_sorteado%
@@ -73,6 +74,7 @@ color 0b
 
 :verificar_palpite   
     if %palpite% == %numero_sorteado% (
+        color 0a
         echo.
         echo ------------------------------------------------------
         echo             PARABENS, VOCE ACERTOU!
