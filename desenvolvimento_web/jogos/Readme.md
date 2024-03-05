@@ -5,8 +5,6 @@ Jogo para o usuário adivinhar um número sorteado pela máquina. A cada erro a 
 
 # Jokenpo - Pedra, Papel, Tesoura, Lagarto e Spock!
 
-Jogo jo-ken-po na versão "Pedra, Papel, Tesoura, Lagarto e Spock" em .bat
-
 Esse é um projeto de jo-ken-po na versão "Pedra, Papel, Tesoura, Lagarto e Spock".
 
 ![](https://i.imgur.com/p9MPH.png)
