@@ -159,6 +159,39 @@ title Jo-Ken-Po
     set jogadas=0
     goto:inicio
 
+:validar_escolha_jogador
+    if %escolha_jogador% == 1 (
+        set escolha_jogador_txt=Pedra
+    ) else if %escolha_jogador% == 2 (
+        set escolha_jogador_txt=Papel
+    ) else if %escolha_jogador% == 3 (
+        set escolha_jogador_txt=Tesoura
+    ) else if %escolha_jogador% == 4 (
+        set escolha_jogador_txt=Lagarto
+    ) else if %escolha_jogador% == 5 (
+        set escolha_jogador_txt=Spock
+    ) else if %escolha_jogador% == 6 (
+        goto :menu
+    ) else (
+        call :exibir_mensagem_opcao_invalida
+        set /p escolha_jogador=Digite sua escolha:
+        call :validar_escolha_jogador
+    )
+
+    if %escolha_computador% == 1 (
+        set escolha_computador_txt=Pedra
+    ) else if %escolha_computador% == 2 (
+        set escolha_computador_txt=Papel
+    ) else if %escolha_computador% == 3 (
+        set escolha_computador_txt=Tesoura
+    ) else if %escolha_computador% == 4 (
+        set escolha_computador_txt=Lagarto
+    ) else if %escolha_computador% == 5 (
+        set escolha_computador_txt=Spock
+    )
+    goto :eof
+
+
 :exibir_regras
     cls
     echo.
