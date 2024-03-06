@@ -11,9 +11,9 @@ title Jo-Ken-Po
     set maximo_jogadas=5
     set pontos=0
     set jogadas=0
-    
-    set /p nome_jogador=Digite seu nome: 
 
+    set /p nome_jogador=Digite seu nome: 
+    
     goto:menu
 
 :menu
@@ -23,7 +23,8 @@ title Jo-Ken-Po
     if %opcao% == 1 (goto:jogo)
     if %opcao% == 2 (goto:exibir_regras)
     if %opcao% == 3 (goto:exibir_ranking)
-    if %opcao% == 4 (exit) else (
+    if %opcao% == 4 (goto:trocar_jogador)
+    if %opcao% == 5 (exit) else (
         call:exibir_mensagem_opcao_invalida
         pause
         goto:menu)
@@ -36,6 +37,10 @@ title Jo-Ken-Po
     set /a jogadas+=1
 
     if %jogadas% gtr %maximo_jogadas% goto:calcular_pontuacao
+
+    set /a jogadas_restantes=maximo_jogadas-jogadas
+    echo Jogadas restantes: %jogadas_restantes%
+    echo.
 
     set /p escolha_jogador=Digite sua escolha: 
 
@@ -122,12 +127,22 @@ title Jo-Ken-Po
     goto:jogo
 
 :calcular_pontuacao
-    echo %nome_jogador%: %pontos% >> %arquivo_ranking%
+    echo %nome_jogador% - %pontos% >> %arquivo_ranking%
+    cls
+    color 0a
     echo.
-    echo Pontuacao final: %pontos%
+    echo                   ( o o )
+    echo   +----------oooO---(_)---Oooo----------+
+    echo    %nome_jogador% sua pontuacao final foi: %pontos%
     echo.
     pause
     goto:menu
+
+:trocar_jogador
+    set "nome_jogador="
+    set "pontos=0"
+    set "jogadas=0"
+    goto:inicio
 
 :exibir_regras
     cls
@@ -193,7 +208,8 @@ title Jo-Ken-Po
     echo [1] Iniciar o jogo
     echo [2] Regras
     echo [3] Exibir ranking
-    echo [4] Sair
+    echo [4] Trocar de jogador
+    echo [5] Sair
     echo -----------------------------------------------
     goto :eof
 
@@ -224,6 +240,7 @@ title Jo-Ken-Po
     cls
     echo.
     echo Ranking:
+    echo.
     type %arquivo_ranking%
     echo.
     pause
