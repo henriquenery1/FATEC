@@ -7,7 +7,13 @@ title Jo-Ken-Po
 
     call :exibir_jokenpo
 
+    set arquivo_ranking=ranking.txt
+    set maximo_jogadas=5
+    set pontos=0
+    set jogadas=0
+    
     set /p nome_jogador=Digite seu nome: 
+
     goto:menu
 
 :menu
@@ -16,7 +22,8 @@ title Jo-Ken-Po
     set /p opcao=Escolha uma opcao: 
     if %opcao% == 1 (goto:jogo)
     if %opcao% == 2 (goto:exibir_regras)
-    if %opcao% == 3 (exit) else (
+    if %opcao% == 3 (goto:exibir_ranking)
+    if %opcao% == 4 (exit) else (
         call:exibir_mensagem_opcao_invalida
         pause
         goto:menu)
@@ -25,6 +32,10 @@ title Jo-Ken-Po
     cls
     call :exibir_jokenpo
     call :exibir_opcoes_jogador
+
+    set /a jogadas+=1
+
+    if %jogadas% gtr %maximo_jogadas% goto:calcular_pontuacao
 
     set /p escolha_jogador=Digite sua escolha: 
 
@@ -52,51 +63,69 @@ title Jo-Ken-Po
     echo.
 
     if "%escolha_jogador_txt%" == "%escolha_computador_txt%" (
-    echo Empate!
+        echo Empate!
+        set /a pontos+=1
     ) else if "%escolha_jogador_txt%" == "Pedra" (
         if "%escolha_computador_txt%" == "Tesoura" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else if "%escolha_computador_txt%" == "Lagarto" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     ) else if "%escolha_jogador_txt%" == "Papel" (
         if "%escolha_computador_txt%" == "Pedra" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else if "%escolha_computador_txt%" == "Spock" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     ) else if "%escolha_jogador_txt%" == "Tesoura" (
         if "%escolha_computador_txt%" == "Papel" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else if "%escolha_computador_txt%" == "Lagarto" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     ) else if "%escolha_jogador_txt%" == "Lagarto" (
         if "%escolha_computador_txt%" == "Spock" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else if "%escolha_computador_txt%" == "Papel" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     ) else if "%escolha_jogador_txt%" == "Spock" (
         if "%escolha_computador_txt%" == "Tesoura" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else if "%escolha_computador_txt%" == "Pedra" (
             echo Voce ganhou!
+            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     )
 
     echo.
-    call :exibir_voltar_menu_ou_jogar
+    pause
+    goto:jogo
+
+:calcular_pontuacao
+    echo %nome_jogador%: %pontos% >> %arquivo_ranking%
+    echo.
+    echo Pontuacao final: %pontos%
+    echo.
     pause
     goto:menu
 
@@ -130,7 +159,8 @@ title Jo-Ken-Po
     echo        -                                           -
     echo        +--------------------(_)--------------------+ 
     echo.
-    call :exibir_voltar_menu_ou_jogar
+    pause
+    goto:menu
 
 :exibir_mensagem_opcao_invalida
     echo.
@@ -138,7 +168,6 @@ title Jo-Ken-Po
     echo   Opcao invalida!
     echo --------------------
     goto :eof
-
 
 :exibir_jokenpo
     cls
@@ -163,14 +192,14 @@ title Jo-Ken-Po
     echo -----------------------------------------------
     echo [1] Iniciar o jogo
     echo [2] Regras
-    echo [3] Sair
+    echo [3] Exibir ranking
+    echo [4] Sair
     echo -----------------------------------------------
     goto :eof
 
-
 :exibir_voltar_menu_ou_jogar
     echo [1] VOLTAR AO MENU PRINCIPAL
-    echo [2] JOGAR
+    echo [2] JOGAR NOVAMENTE
     echo.
     set /p opcao_jogo=Escolha uma opcao: 
 
@@ -189,3 +218,13 @@ title Jo-Ken-Po
     echo [5] Spock
     echo [6] Voltar ao menu principal
     echo.
+    goto :eof
+
+:exibir_ranking
+    cls
+    echo.
+    echo Ranking:
+    type %arquivo_ranking%
+    echo.
+    pause
+    goto:menu
