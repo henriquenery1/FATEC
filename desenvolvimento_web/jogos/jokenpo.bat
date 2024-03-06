@@ -40,25 +40,10 @@ title Jo-Ken-Po
 
     echo Jogadas restantes: %jogadas_restantes%
     echo.
-    set /p escolha_jogador=Digite sua escolha: 
     
     set /a escolha_computador=%random% %% 5 + 1
-
-    if %escolha_jogador% == 6 goto:menu
-    if %escolha_jogador% lss 1 goto:jogo
-    if %escolha_jogador% gtr 5 goto:jogo
-
-    if %escolha_jogador% == 1 set escolha_jogador_txt=Pedra
-    if %escolha_jogador% == 2 set escolha_jogador_txt=Papel
-    if %escolha_jogador% == 3 set escolha_jogador_txt=Tesoura
-    if %escolha_jogador% == 4 set escolha_jogador_txt=Lagarto
-    if %escolha_jogador% == 5 set escolha_jogador_txt=Spock
-
-    if %escolha_computador% == 1 set escolha_computador_txt=Pedra
-    if %escolha_computador% == 2 set escolha_computador_txt=Papel
-    if %escolha_computador% == 3 set escolha_computador_txt=Tesoura
-    if %escolha_computador% == 4 set escolha_computador_txt=Lagarto
-    if %escolha_computador% == 5 set escolha_computador_txt=Spock
+    set /p escolha_jogador=Digite sua escolha: 
+    call:validar_escolha_jogador
 
     echo.
     echo Voce escolheu: %escolha_jogador_txt%
@@ -123,6 +108,38 @@ title Jo-Ken-Po
     echo.
     pause
     goto:jogo
+
+:validar_escolha_jogador
+    if %escolha_jogador% == 1 (
+        set escolha_jogador_txt=Pedra
+    ) else if %escolha_jogador% == 2 (
+        set escolha_jogador_txt=Papel
+    ) else if %escolha_jogador% == 3 (
+        set escolha_jogador_txt=Tesoura
+    ) else if %escolha_jogador% == 4 (
+        set escolha_jogador_txt=Lagarto
+    ) else if %escolha_jogador% == 5 (
+        set escolha_jogador_txt=Spock
+    ) else if %escolha_jogador% == 6 (
+        goto :menu
+    ) else (
+        call :exibir_mensagem_opcao_invalida
+        set /p escolha_jogador=Digite sua escolha:
+        call :validar_escolha_jogador
+    )
+
+    if %escolha_computador% == 1 (
+        set escolha_computador_txt=Pedra
+    ) else if %escolha_computador% == 2 (
+        set escolha_computador_txt=Papel
+    ) else if %escolha_computador% == 3 (
+        set escolha_computador_txt=Tesoura
+    ) else if %escolha_computador% == 4 (
+        set escolha_computador_txt=Lagarto
+    ) else if %escolha_computador% == 5 (
+        set escolha_computador_txt=Spock
+    )
+    goto :eof
 
 :calcular_pontuacao
     echo %nome_jogador% - %pontos% >> %arquivo_ranking%
