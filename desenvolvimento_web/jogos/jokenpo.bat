@@ -31,19 +31,17 @@ title Jo-Ken-Po
 
 :jogo
     cls
+    set /a jogadas+=1
+    if %jogadas% gtr %maximo_jogadas% goto:calcular_pontuacao
+    set /a jogadas_restantes=maximo_jogadas-jogadas
+
     call :exibir_jokenpo
     call :exibir_opcoes_jogador
 
-    set /a jogadas+=1
-
-    if %jogadas% gtr %maximo_jogadas% goto:calcular_pontuacao
-
-    set /a jogadas_restantes=maximo_jogadas-jogadas
     echo Jogadas restantes: %jogadas_restantes%
     echo.
-
     set /p escolha_jogador=Digite sua escolha: 
-
+    
     set /a escolha_computador=%random% %% 5 + 1
 
     if %escolha_jogador% == 6 goto:menu
@@ -67,54 +65,54 @@ title Jo-Ken-Po
     echo O computador escolheu: %escolha_computador_txt%
     echo.
 
-    if "%escolha_jogador_txt%" == "%escolha_computador_txt%" (
+    if %escolha_jogador_txt% == %escolha_computador_txt% (
         echo Empate!
         set /a pontos+=1
-    ) else if "%escolha_jogador_txt%" == "Pedra" (
-        if "%escolha_computador_txt%" == "Tesoura" (
+    ) else if %escolha_jogador_txt% == Pedra (
+        if %escolha_computador_txt% == Tesoura (
             echo Voce ganhou!
             set /a pontos+=3
-        ) else if "%escolha_computador_txt%" == "Lagarto" (
-            echo Voce ganhou!
-            set /a pontos+=3
-        ) else (
-            echo Voce perdeu!
-        )
-    ) else if "%escolha_jogador_txt%" == "Papel" (
-        if "%escolha_computador_txt%" == "Pedra" (
-            echo Voce ganhou!
-            set /a pontos+=3
-        ) else if "%escolha_computador_txt%" == "Spock" (
+        ) else if %escolha_computador_txt% == Lagarto (
             echo Voce ganhou!
             set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
-    ) else if "%escolha_jogador_txt%" == "Tesoura" (
-        if "%escolha_computador_txt%" == "Papel" (
+    ) else if %escolha_jogador_txt% == Papel (
+        if %escolha_computador_txt% == Pedra (
             echo Voce ganhou!
             set /a pontos+=3
-        ) else if "%escolha_computador_txt%" == "Lagarto" (
-            echo Voce ganhou!
-            set /a pontos+=3
-        ) else (
-            echo Voce perdeu!
-        )
-    ) else if "%escolha_jogador_txt%" == "Lagarto" (
-        if "%escolha_computador_txt%" == "Spock" (
-            echo Voce ganhou!
-            set /a pontos+=3
-        ) else if "%escolha_computador_txt%" == "Papel" (
+        ) else if %escolha_computador_txt% == Spock (
             echo Voce ganhou!
             set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
-    ) else if "%escolha_jogador_txt%" == "Spock" (
-        if "%escolha_computador_txt%" == "Tesoura" (
+    ) else if %escolha_jogador_txt% == Tesoura (
+        if %escolha_computador_txt% == Papel (
             echo Voce ganhou!
             set /a pontos+=3
-        ) else if "%escolha_computador_txt%" == "Pedra" (
+        ) else if %escolha_computador_txt% == Lagarto (
+            echo Voce ganhou!
+            set /a pontos+=3
+        ) else (
+            echo Voce perdeu!
+        )
+    ) else if %escolha_jogador_txt% == Lagarto (
+        if %escolha_computador_txt% == Spock (
+            echo Voce ganhou!
+            set /a pontos+=3
+        ) else if %escolha_computador_txt% == Papel (
+            echo Voce ganhou!
+            set /a pontos+=3
+        ) else (
+            echo Voce perdeu!
+        )
+    ) else if %escolha_jogador_txt% == Spock (
+        if %escolha_computador_txt% == Tesoura (
+            echo Voce ganhou!
+            set /a pontos+=3
+        ) else if %escolha_computador_txt% == Pedra (
             echo Voce ganhou!
             set /a pontos+=3
         ) else (
@@ -139,9 +137,9 @@ title Jo-Ken-Po
     goto:menu
 
 :trocar_jogador
-    set "nome_jogador="
-    set "pontos=0"
-    set "jogadas=0"
+    set nome_jogador=
+    set pontos=0
+    set jogadas=0
     goto:inicio
 
 :exibir_regras
@@ -219,8 +217,8 @@ title Jo-Ken-Po
     echo.
     set /p opcao_jogo=Escolha uma opcao: 
 
-    if "%opcao_jogo%" == "1" goto :menu
-    if "%opcao_jogo%" == "2" goto :jogo
+    if %opcao_jogo% == 1 goto :menu
+    if %opcao_jogo% == 2 goto :jogo
 
     echo Opcao invalida!
     pause
