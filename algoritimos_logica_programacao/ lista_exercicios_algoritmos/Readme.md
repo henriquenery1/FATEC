@@ -1,12 +1,12 @@
-# Exercícios de Algoritmo e Lógica Resolvidos
+# Exercícios de algoritmo
 
-Esta pasta contém uma Lista de Exercícios de Algoritmos resolvidos em VisualG.
+Esta pasta contém uma Lista de Exercícios de Algoritmos.
 
-## Documentação da linguagem
+## Documentação da Linguagem
 
-[VisualG](https://www.acad.cefetmg.br/uploads/MATERIAIS_AULAS/340988-A_Linguagem_de_Programa%C3%A7%C3%A3o_do_VisuAlg.pdf)
+[VisualG - Linguagem de Programação do VisuAlg](https://www.acad.cefetmg.br/uploads/MATERIAIS_AULAS/340988-A_Linguagem_de_Programa%C3%A7%C3%A3o_do_VisuAlg.pdf)
 
-## Feito por
-- [Diogo Peres]().
-- [Henrique Nery](https://github.com/henriquenery1).
+## Autores
 
+- [Diogo Peres]()
+- [Henrique Nery](https://github.com/henriquenery1)
