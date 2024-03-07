@@ -20,21 +20,21 @@ title Jo-Ken-Po
     call :exibir_menu_principal
 
     set /p opcao=Escolha uma opcao: 
-    if %opcao% == 1 (goto:jogo)
-    if %opcao% == 2 (goto:exibir_regras)
-    if %opcao% == 3 (goto:exibir_ranking)
-    if %opcao% == 4 (goto:trocar_jogador)
+    if %opcao% == 1 (goto :jogo)
+    if %opcao% == 2 (goto :exibir_regras)
+    if %opcao% == 3 (goto :exibir_ranking)
+    if %opcao% == 4 (goto :trocar_jogador)
     if %opcao% == 5 (exit) else (
-        call:exibir_mensagem_opcao_invalida
+        call :exibir_mensagem_opcao_invalida
         pause
-        goto:menu)
+        goto :menu)
 
 :jogo
     cls
     color 09
 
     set /a jogadas+=1
-    if %jogadas% gtr %maximo_jogadas% goto:calcular_pontuacao
+    if %jogadas% GTR %maximo_jogadas% goto :calcular_pontuacao
     set /a jogadas_restantes=maximo_jogadas-jogadas
 
     call :exibir_jokenpo
@@ -45,18 +45,18 @@ title Jo-Ken-Po
     
     set /a escolha_computador=%random% %% 5 + 1
     set /p escolha_jogador=Digite sua escolha: 
-    call:validar_escolha_jogador
+    call :validar_escolha_jogador
 
     echo.
     echo Voce escolheu: %escolha_jogador_txt%
     echo O computador escolheu: %escolha_computador_txt%
     echo.
 
-    call:determinar_resultado_jogo
+    call :determinar_resultado_jogo
 
     echo.
     pause
-    goto:jogo
+    goto :jogo
 
 :validar_escolha_jogador
     if %escolha_jogador% == 1 (
@@ -145,7 +145,7 @@ title Jo-Ken-Po
             echo Voce perdeu!
         )
     )
-    goto:eof
+    goto :eof
     
 
 :calcular_pontuacao
@@ -158,13 +158,13 @@ title Jo-Ken-Po
     echo    %nome_jogador% sua pontuacao final foi: %pontos%
     echo.
     pause
-    goto:menu
+    goto :menu
 
 :trocar_jogador
     set nome_jogador=
     set pontos=0
     set jogadas=0
-    goto:inicio
+    goto :inicio
 
 :validar_escolha_jogador
     if %escolha_jogador% == 1 (
@@ -230,7 +230,7 @@ title Jo-Ken-Po
     echo        +--------------------(_)--------------------+ 
     echo.
     pause
-    goto:menu
+    goto :menu
 
 :exibir_mensagem_opcao_invalida
     echo.
@@ -299,4 +299,4 @@ title Jo-Ken-Po
     type %arquivo_ranking%
     echo.
     pause
-    goto:menu
+    goto :menu
