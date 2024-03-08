@@ -82,23 +82,23 @@ title Testes Jo-Ken-Po
     goto :eof
 
 :test_empate
-    call :exibir_jogada
+REM    call :exibir_jogada
     echo Deve ser empate
     call :determinar_resultado_jogo
     echo.
 
 :test_vitoria
-call :exibir_jogada
+REM    call :exibir_jogada
     echo Deve exibir Voce ganhou!
     call :determinar_resultado_jogo
     echo.
 
 :test_derrota
-call :exibir_jogada
+REM    call :exibir_jogada
     echo Deve exibir Voce perdeu!
     call :determinar_resultado_jogo
     echo.
 
-:exibir_jogada
-    echo Jogador escolheu: %escolha_jogador_txt%
-    echo Computador escolheu: %escolha_computador_txt%
+REM :exibir_jogada
+REM    echo Jogador escolheu: %escolha_jogador_txt%
+REM    echo Computador escolheu: %escolha_computador_txt%
