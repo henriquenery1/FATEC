@@ -38,54 +38,43 @@ title Testes Jo-Ken-Po
 :determinar_resultado_jogo
     if %escolha_jogador_txt% == %escolha_computador_txt% (
         echo Empate!
-        set /a pontos+=1
     ) else if %escolha_jogador_txt% == Pedra (
         if %escolha_computador_txt% == Tesoura (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else if %escolha_computador_txt% == Lagarto (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     ) else if %escolha_jogador_txt% == Papel (
         if %escolha_computador_txt% == Pedra (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else if %escolha_computador_txt% == Spock (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     ) else if %escolha_jogador_txt% == Tesoura (
         if %escolha_computador_txt% == Papel (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else if %escolha_computador_txt% == Lagarto (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     ) else if %escolha_jogador_txt% == Lagarto (
         if %escolha_computador_txt% == Spock (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else if %escolha_computador_txt% == Papel (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
     ) else if %escolha_jogador_txt% == Spock (
         if %escolha_computador_txt% == Tesoura (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else if %escolha_computador_txt% == Pedra (
             echo Voce ganhou!
-            set /a pontos+=3
         ) else (
             echo Voce perdeu!
         )
@@ -99,13 +88,13 @@ title Testes Jo-Ken-Po
     echo.
 
 :test_vitoria
-    call :exibir_jogada
+call :exibir_jogada
     echo Deve exibir Voce ganhou!
     call :determinar_resultado_jogo
     echo.
 
 :test_derrota
-    call :exibir_jogada
+call :exibir_jogada
     echo Deve exibir Voce perdeu!
     call :determinar_resultado_jogo
     echo.
