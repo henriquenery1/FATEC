@@ -10,7 +10,7 @@ inicio
 escreva("Digite o valor do cateto oposto: ")
 leia(cat_o)
 
-escreval("Digite o valor do cateto adjacente: ")
+escreva("Digite o valor do cateto adjacente: ")
 leia(cat_a)
 
 conta <- (cat_o^2) + (cat_a^2)
