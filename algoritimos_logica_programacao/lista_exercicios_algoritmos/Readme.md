@@ -12,3 +12,4 @@ Esta pasta contém uma Lista de Exercícios de Algoritmos.
 - [Henrique Nery](https://github.com/henriquenery1)
 - [Ellen Eufrasio]()
 - [Giulia Caroline](https://github.com/GiuCaroline)
+
