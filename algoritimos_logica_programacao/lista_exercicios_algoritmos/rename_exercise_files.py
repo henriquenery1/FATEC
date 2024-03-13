@@ -17,15 +17,11 @@ def copy_and_rename_files_with_new_name():
         # Extrai o número do exercício do nome do arquivo
         ex_number = re.search(r'ex(\d{2})\.alg', file).group(1)
 
-        # # Renomeia o arquivo no formato "exXX_new_name.alg"
         new_file_name = f"ex{ex_number}_{new_name}.alg"
 
         shutil.copy(file, os.path.join(new_folder, new_file_name))
 
     print("Arquivos renomeados com sucesso.")
 
-def main():
-    copy_and_rename_files_with_new_name()
-
 if __name__ == "__main__":
-    main()
+    copy_and_rename_files_with_new_name()
