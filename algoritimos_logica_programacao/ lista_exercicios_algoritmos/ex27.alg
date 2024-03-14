@@ -5,7 +5,7 @@ algoritmo "ex27"
 \\Portanto não é necessário se preocupar com validações.
 
 var
-num1, num2, div : real
+num1, num2, divisao : real
 
 inicio
 escreval("*Lembrando que o segundo número não pode ser 0*")
@@ -17,8 +17,8 @@ leia(num1)
 escreva("Digite o segundo número da divisão: ")
 leia(num2)
 
-div <- num1 \ num2
+divisao <- num1 \ num2
 
-escreva("A divisão de ", num1," por ", num2," é de", div)
+escreva("A divisão de ", num1," por ", num2," é de", divisao)
 
 fimalgoritmo

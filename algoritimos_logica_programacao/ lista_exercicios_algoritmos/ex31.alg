@@ -4,7 +4,7 @@ algoritmo "ex31"
 \\o novo peso se a pessoa emagrecer 20% sobre o peso digitado.
 
 var
-peso, engordar, emagracer : real
+peso, engordar, emagrecer : real
 
 inicio
 escreva("Digite o seu peso: ")

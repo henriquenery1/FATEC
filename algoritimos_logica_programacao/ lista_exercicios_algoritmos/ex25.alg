@@ -13,4 +13,6 @@ leia(altura)
 
 volume <- 3.14 * (raio^2) * altura
 
+escreva("O volume da sua caixa da água é de", volume)
+
 fimalgoritmo

@@ -4,19 +4,19 @@ algoritmo "ex30"
 \\calcule e mostre a comissão e o salário final do funcionário.
 
 var
-salário, vendas , comissão , sal_final: real
+salario, valor_vendas, comissao, salario_final: real
 
 inicio
 escreva("Digite o salário fixo do funcionário: ")
-leia(salário)
+leia(salario)
 
 escreva("Digite o valor das vendas deste funcionário: ")
-leia(vendas)
+leia(valor_vendas)
 
-comissão <- vendas * 1.04
-sal_final <- comissão + salário
+comissao <- valor_vendas * 0.04
+salario_final <- comissao + salario
 
-escreval("A comissão que este funcionário vai receber é de", comissão)
-escreval("O salário final deste funcionário será de", sal_final)
+escreval("A comissão que este funcionário vai receber é de", comissao)
+escreval("O salário final deste funcionário será de", salario_final)
 
 fimalgoritmo

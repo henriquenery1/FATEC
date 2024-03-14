@@ -4,7 +4,7 @@ algoritmo "ex28"
 \\Considerando peso 2 para a primeira nota e peso 3 para a segunda nota.
 
 var
-nota1, nota2, pon : real
+nota1, nota2, ponderada : real
 
 inicio
 escreva("Digite a primeira nota do aluno: ")

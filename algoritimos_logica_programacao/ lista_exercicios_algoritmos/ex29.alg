@@ -3,13 +3,13 @@ algoritmo "ex29"
 \\Calcule e mostre o novo preço, sabendo-se que este sofreu um desconto de 10%.
 
 var
-preço, desconto : real
+preco, desconto : real
 
 inicio
 escreva("Digite o valor do produto: ")
-leia(preço)
+leia(preco)
 
-desconto <- preço * 0.9
+desconto <- preco * 0.9
 
 escreva("O valor do produto com o desconto aplicado será de", desconto)
 

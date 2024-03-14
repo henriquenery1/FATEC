@@ -3,7 +3,7 @@ algoritmo "ex26"
 \\Calcule e mostre a multiplicação desses números.
 
 var
-num1, num2, num3, mult : real
+num1, num2, num3, multiplicacao : real
 
 inicio
 escreva("Digite o primeiro número da multiplicação: ")
@@ -15,8 +15,8 @@ leia(num2)
 escreva("Digite o terceiro número: ")
 leia(num3)
 
-mult <- num1 * num2 * num3
+multiplicacao <- num1 * num2 * num3
 
-escreva("O resultado da multiplicação é de", mult)
+escreva("O resultado da multiplicação é de", multiplicacao)
 
 fimalgoritmo
