@@ -20,7 +20,7 @@ escreval("Digite o número do mês:")
 leia(mes)
 
 dias_do_mes <- 30
-dias_desde_comeco_ano <- (mes * dias_do_mes) + dia
+dias_desde_comeco_ano <- ((mes - 1) * dias_do_mes) + dia
 
 escreval("Se passaram", dias_desde_comeco_ano, " dias desde de o início do ano")
 
