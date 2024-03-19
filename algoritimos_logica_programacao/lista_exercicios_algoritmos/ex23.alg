@@ -4,18 +4,20 @@ algoritmo "ex23"
 \\Faça um algoritmo para ler os dados necessários e calcular a altura do prédio.
 
 var
-altura, sombra, som_pessoa, alt_prédio : real 
+altura_pessoa, sombra_pessoa, sombra_predio, altura_predio : real
 
 inicio
-escreval("Digite a sua altura: ")
-leia(altura)
+escreval("Digite a sua altura (em metros): ")
+leia(altura_pessoa)
 
-escreval("Digite a sombra do prédio em metros: ")
-leia(sombra)
+escreval("Digite o comprimento da sua sombra (em metros): ")
+leia(sombra_pessoa)
 
-som_pessoa <- (altura * 1.5)
-alt_prédio <- (altura * sombra) / som_pessoa
+escreval("Digite o comprimento da sombra do prédio (em metros): ")
+leia(sombra_predio)
 
-escreval("A altura do prédio é ", alt_prédio,"m")
+altura_predio <- (sombra_predio * altura_pessoa) / sombra_pessoa
+
+escreval("A altura do prédio é ", altura_predio," metros.")
 
 fimalgoritmo

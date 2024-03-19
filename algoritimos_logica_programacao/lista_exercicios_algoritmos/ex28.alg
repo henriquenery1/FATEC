@@ -13,8 +13,8 @@ leia(nota1)
 escreva("Digite a segunda nota do aluno: ")
 leia(nota2)
 
-pon <- ((nota1*2)+(nota2*3)) \ 5
+ponderada <- ((nota1*2)+(nota2*3)) \ 5
 
-escreval("a média pondera do aluno será de", pon)
+escreval("a média pondera do aluno será de", ponderada)
 
 fimalgoritmo

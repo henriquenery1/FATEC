@@ -10,10 +10,10 @@ inicio
 escreva("Digite quantos litros de refresco você gostaria de fazer: ")
 leia(refresco)
 
-agua <- (4/5) * referesco
+agua <- (4/5) * refresco
 mara <- (1/5) * refresco
 
 escreval("Será necessário ", agua," litros de água.")
-escreval("E será necessário ", mara," litros de suco de maracujá.)
+escreval("E será necessário ", mara," litros de suco de maracujá.")
 
 fimalgoritmo
