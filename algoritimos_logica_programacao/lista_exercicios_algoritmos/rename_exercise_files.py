@@ -5,7 +5,7 @@ import re
 def copy_and_rename_files_with_new_name():
     new_name = input("Insira o seu nome para os arquivos: ")
 
-    new_folder = "arquivos_renomeados"
+    new_folder = input("Insira o seu nome da pasta: ")
     os.makedirs(new_folder, exist_ok=True)
 
     files = os.listdir()
