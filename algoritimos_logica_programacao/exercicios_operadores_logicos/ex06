@@ -36,9 +36,7 @@ b) (A + 1 >= ((B) ^ (0.5)) E (PROFISSAO = MEDICO)
 
    Segundo passo - ADVOGADO = MEDICO: False
 
-   Terceiro passo - True OU False
-
-   Resultado final: True
+   Resultado final: False
 
 
 b) (A + 1 >= ((B) ^ (0.5)) E (PROFISSAO = MEDICO)
@@ -47,9 +45,7 @@ b) (A + 1 >= ((B) ^ (0.5)) E (PROFISSAO = MEDICO)
 
    Segundo passo - MEDICO = MEDICO: True
 
-   Terceiro passo - False OU True
-
-   Resultado final: True
+   Resultado final: False
 
 
 b) (A + 1 >= ((B) ^ (0.5)) E (PROFISSAO = MEDICO)
@@ -58,9 +54,7 @@ b) (A + 1 >= ((B) ^ (0.5)) E (PROFISSAO = MEDICO)
 
    Segundo passo - PROFESSOR = MEDICO: False
 
-   Terceiro passo - True OU False
-
-   Resultado final: True
+   Resultado final: False
 
 c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
@@ -94,7 +88,7 @@ c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
    Resultado final: False
 
-c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
+d) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
    Primeiro passo - Não teste: True
 
@@ -105,7 +99,7 @@ c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
    Resultado final: True
 
 
-c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
+d) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
    Primeiro passo - Não teste: True
 
@@ -116,7 +110,7 @@ c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
    Resultado final: False
 
 
-c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
+d) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
    Primeiro passo - Não teste: True
 
@@ -126,7 +120,7 @@ c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
    Resultado final: True
 
-c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
+e) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
    Primeiro passo - 3 + 1 >= ((16) ^ (0.5)): False
 
@@ -135,7 +129,7 @@ c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
    Resultado final: False
 
 
-c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
+e) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
    Primeiro passo - 5 + 1 >= ((64) ^ (0.5)): True
 
@@ -144,7 +138,7 @@ c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
    Resultado final: False
 
 
-c) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
+e) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))
 
    Primeiro passo - 2.5 + 1 >= ((9) ^ (0.5)): False
 
