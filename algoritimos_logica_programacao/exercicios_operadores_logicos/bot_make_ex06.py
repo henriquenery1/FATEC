@@ -66,7 +66,7 @@ def d(a, b, nome, profissao):
     quarto_passo = primeiro_passo and segundo_passo
     resultado = quarto_passo or terceiro_passo
 
-    print(f'd) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))\n')
+    print(f'd) NÃO TESTE E ((A + 1) >= ((B) ^ (0.5)) OU NÃO (PROFISSAO = MEDICO))\n')
     print(f'   Primeiro passo - Não teste: {primeiro_passo}\n')
     print(f'   Segundo passo - ({a} + 1) >= ({b}) ^ (0.5): {segundo_passo}\n')
     print(f'   Terceiro passo - Não {profissao}: {terceiro_passo}\n')
@@ -80,7 +80,7 @@ def e(a, b, nome, profissao):
     segundo_passo = teste
     resultado = primeiro_passo and segundo_passo
 
-    print(f'e) (NOME <> ANA) OU (PROFISSAO = MEDICO) E (A + 1 >= ((B) ^ (0.5)))\n')
+    print(f'e) NÃO (A + 1 >= ((B) ^ (0.5)) E TESTE)\n')
     print(f'   Primeiro passo - {a} + 1 >= (({b}) ^ (0.5)): {primeiro_passo}\n')
     print(f'   Segundo passo - teste: {segundo_passo}\n')
     print(f'   Resultado final: {resultado}\n')    
