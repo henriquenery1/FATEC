@@ -1,0 +1,18 @@
+algoritmo "condicional"
+
+var
+numero, resto: inteiro
+
+inicio
+escreval("Digite um número inteiro:")
+leia(numero)
+resto <- numero mod 2
+
+se (resto <> 0) entao
+    escreval("O número é impar")
+fimse
+
+escreval("Acabou")
+
+fimalgoritmo
+

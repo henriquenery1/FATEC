@@ -1,0 +1,21 @@
+algoritmo "maior numero digitado"
+
+var
+primeiro_numero, segundo_numero, maior_numero: inteiro
+
+inicio
+escreval("Digite um número inteiro:")
+leia(primeiro_numero)
+escreval()
+escreval("Digite outro número inteiro:")
+leia(segundo_numero)
+
+maior_numero <- segundo_numero
+
+se (primeiro_numero > maior_numero) entao
+    escreval("O maior numero é ", primeiro_numero )
+senao
+    escreval("O maior numero é ", segundo_numero )
+fimse
+
+fimalgoritmo

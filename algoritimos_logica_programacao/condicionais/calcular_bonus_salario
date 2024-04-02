@@ -1,0 +1,25 @@
+algoritmo "condicional"
+
+var
+salario, bonus: real
+tempo: inteiro
+
+inicio
+escreval("Digite seu salário:")
+leia(salario)
+
+escreval()
+
+escreval("Digite seu tempo de trampo:")
+leia(tempo)
+
+se tempo >= 5 entao
+    bonus <- salario * 0.2
+senao 
+    bonus <- salario * 0.1
+fimse
+
+escreval()
+escreval("Seu bonus é de R$ ", bonus)
+
+fimalgoritmo
