@@ -8,7 +8,7 @@ inicio
 escreval("Digite sua idade:")
 leia(idade)
 
-se idade < 17 entao
+se idade < 18 entao
     escreval("Você não pode dirigir")
 senao
     escreval("Você é habilitado?")
