@@ -1,0 +1,25 @@
+algoritmo "maior numero digitado"
+
+var
+idade, opcao: inteiro
+habilitado: logico
+
+inicio
+escreval("Digite sua idade:")
+leia(idade)
+
+se idade < 17 entao
+    escreval("Você não pode dirigir")
+senao
+    escreval("Você é habilitado?")
+    escreval("Digite 1 para sim e 2 para não")
+    leia(opcao)
+    se opcao = 1 entao
+        escreval("Você pode dirigir")
+    senao
+        escreval("Você não pode dirigir")
+    fimse
+
+fimse
+
+fimalgoritmo
