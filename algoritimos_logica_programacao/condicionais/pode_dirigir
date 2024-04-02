@@ -1,4 +1,4 @@
-algoritmo "maior numero digitado"
+algoritmo ""
 
 var
 idade, opcao: inteiro

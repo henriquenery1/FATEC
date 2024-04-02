@@ -1,4 +1,4 @@
-algoritmo "maior numero digitado"
+algoritmo ""
 
 var
 primeiro_numero, segundo_numero: inteiro
