@@ -16,8 +16,8 @@ leia(peso_paciente)
 escreval("Digite a altura do paciente:")
 leia(altura_paciente)
 
-peso_ideal_homem <- (altura_paciente * 72.7) - 58
-peso_ideal_mulher <- (altura_paciente * 62.1) - 44.7
+peso_ideal_homem <- ((altura_paciente - 152.4) * 0.75) + 52 
+peso_ideal_mulher <- ((altura_paciente - 152.4) * 0.67) + 52
 
 se opcao = 1 entao
     se peso_paciente = peso_ideal_homem entao
