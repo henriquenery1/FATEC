@@ -19,3 +19,6 @@ Processo de software com qualidade
     Robustez
     manutenibilidade
     Velocidade
+
+Prática
+    Criação de um documento de requisitos
