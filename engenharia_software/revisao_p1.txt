@@ -1,0 +1,21 @@
+Elementos básicos de um software
+    instruções
+    Estruturas de dados
+    Documentos
+
+Caracteristicas do Software
+    Desenvolvido ou projetado por engenharia
+    Não manufaturado no sentido clássico
+    Não se desgasta, mas se deteriora
+
+Aplicações Software 
+    Básico
+    De tempo real
+    Comercial
+
+Processo de software com qualidade
+    Aceitabilidade
+    Cofiabilidade
+    Robustez
+    manutenibilidade
+    Velocidade
