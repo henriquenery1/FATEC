@@ -1,0 +1,21 @@
+Instruções
+Um roteiro de passos para a elaboração do modelo de entidade e relacionamento e a criação do diagrama que o representará.
+
+1. Listar as entidades candidatas a integrar o modelo. 2. Analisar e selecionar as entidades que realmente fazem parte do modelo, excluindo as demais. 3. Analisar os relacionamentos entre as entidades. 4. Definir a cardinalidade dos relacionamentos. 5. Definir os atributos das entidades e relacionamentos com campos e também as chaves primária e estrangeira (se houver). 6. Definir as restrições de integridade dos relacionamentos. 7. Desenhar o diagrama de entidade e relacionamento.
+
+Estudo de caso
+
+Vale imaginar como construir um modelo de entidade e relacionamento para o dono de uma pequena padaria, que será chamado de senhor João. No final, será elaborado o diagrama de entidade e relacionamento. 
+O senhor João vende, além de pães, vários outros tipos de produtos, tais como frios, laticínios, lanches, refrigerantes, sorvetes, balas, chicletes, chocolates, cartões telefônicos e artigos diversos expostos no balcão do caixa. Vende também, nos fins de semana, frango assado. 
+Na padaria, trabalham funcionários que executam as funções de caixa, atendente, auxiliar de limpeza e padeiro.
+O senhor João quer que cada cliente receba um cartão com um código na entrada da padaria e que este cartão seja usado para registrar os produtos comprados pelos clientes. Os preços desses produtos deverão ser somados automaticamente assim que o cartão for entregue no caixa, que confirmará o valor total da compra, verificará a forma de pagamento escolhida, receberá o pagamento e, se for o caso, devolverá o troco ao cliente. 
+O senhor João também deseja controlar dos estoques para que não faltem produtos. Ele tem, portanto, necessidade de informações sobre: • As vendas, isto é, precisa que sejam armazenados todos os dados de todas as vendas da padaria: quais produtos foram vendidos, em qual quantidade e por qual valor, além de qual empregado registrou a venda e qual recebeu o pagamento. 
+• O estoque, de modo que cada produto vendido seja debitado no saldo. 
+• A necessidade de reposição de produtos – o modelo deve ter capacidade para gerar a qualquer momento a relação dos itens cujo saldo está abaixo do estoque mínimo desejável para facilitar a identificação daqueles que precisam ser repostos. 
+• A durabilidade e o uso dos cartões. 
+• Seus fornecedores – endereços, telefones e o nome do contato na empresa para efetuar a compra. 
+
+Uma observação importante: 
+o senhor João já possui um controle fiscal e contábil de toda a movimentação, cujos documentos e registros ele envia semanalmente para seu contador. Fica, assim, para o modelo a ser proposto apenas o controle físico (estoque) e financeiro das transações. Vamos pensar no problema proposto pelo senhor João, construir um modelo e demonstrá-lo por meio de um diagrama de entidade e relacionamento. Para isso, é preciso dar vários passos.
+
+O senhor João precisa de informações detalhadas.
