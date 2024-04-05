@@ -1,7 +1,13 @@
 Instruções
 Um roteiro de passos para a elaboração do modelo de entidade e relacionamento e a criação do diagrama que o representará.
 
-1. Listar as entidades candidatas a integrar o modelo. 2. Analisar e selecionar as entidades que realmente fazem parte do modelo, excluindo as demais. 3. Analisar os relacionamentos entre as entidades. 4. Definir a cardinalidade dos relacionamentos. 5. Definir os atributos das entidades e relacionamentos com campos e também as chaves primária e estrangeira (se houver). 6. Definir as restrições de integridade dos relacionamentos. 7. Desenhar o diagrama de entidade e relacionamento.
+1. Listar as entidades candidatas a integrar o modelo. 
+2. Analisar e selecionar as entidades que realmente fazem parte do modelo, excluindo as demais. 
+3. Analisar os relacionamentos entre as entidades. 
+4. Definir a cardinalidade dos relacionamentos. 
+5. Definir os atributos das entidades e relacionamentos com campos e também as chaves primária e estrangeira (se houver). 
+6. Definir as restrições de integridade dos relacionamentos. 
+7. Desenhar o diagrama de entidade e relacionamento.
 
 Estudo de caso
 

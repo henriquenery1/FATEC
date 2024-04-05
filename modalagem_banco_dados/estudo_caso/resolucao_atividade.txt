@@ -1,0 +1,44 @@
+
+1. Listar as entidades candidatas a integrar o modelo. 
+
+João
+
+Pães
+tipos de produtos
+frios
+laticínios
+lanches
+refrigerantes
+sorvetes
+balas
+chicletes
+chocolates
+cartões telefônicos
+artigos diversos expostos no balcão do caixa 
+frango assado. 
+
+funcionários 
+funções de caixa 
+atendente 
+auxiliar de limpeza
+padeiro
+
+Clientes
+cartão com um código
+preços desses produtos
+valor total da compra
+verificará a forma de pagamento escolhida
+receber o pagamento
+
+controlar os estoques
+quais produtos foram vendidos 
+em qual quantidade  
+por qual valor 
+além de qual empregado registrou a venda  
+qual empregado recebeu o pagamento
+
+2. Analisar e selecionar as entidades que realmente fazem parte do modelo, 
+excluindo as demais. 
+
+Produto -> Clientes (n;n)
+Produto -> Clientes (n;n)
