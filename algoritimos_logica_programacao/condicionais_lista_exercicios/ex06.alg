@@ -5,7 +5,7 @@ peso_paciente, altura_paciente, opcao: real
 peso_ideal_homem, peso_ideal_mulher: real
 
 Inicio
-escreval("Qual o sexo do paciente:")
+escreval("Qual o sexo do paciente?")
 escreval("[1] Homem")
 escreval("[2] Mulher")
 leia(opcao)

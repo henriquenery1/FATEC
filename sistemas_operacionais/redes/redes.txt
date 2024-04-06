@@ -1,0 +1,4 @@
+Rede de computadores
+    Conjunto de dispositivos conectados por enlaces
+    Estrutura de interligação dos sistemas distribuidos
+    
