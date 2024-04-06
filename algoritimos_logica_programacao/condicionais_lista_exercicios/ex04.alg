@@ -2,7 +2,7 @@ algoritmo "ex04"
 
 var
 prova1, prova2, prova3: inteiro
-media: real
+media, nota_necessaria: real
 
 inicio
 escreval("Digite sua nota da prova 1:")
@@ -25,7 +25,8 @@ se media > 7 entao
 senao
     se media < 7 entao
         se media > 3 entao
-            escreval("Você precisa fazer o exame")
+            nota_necessaria <- 12 - media
+            escreval("Você precisa fazer o exame e sua nota deve ser maior que ", nota_necessaria)
         senao
             escreval("Você está reprovado")
         fimse
