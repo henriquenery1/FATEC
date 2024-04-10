@@ -1,4 +1,4 @@
-Fluxo Normal - Registro e Monitoramento de Transações Financeiras:
+5. Gestão financeira - Fluxo normal:
 
 1. O usuário acessa o módulo de gestão financeira do sistema.
 2. O sistema exibe opções para registrar diferentes tipos de transações (vendas, pagamentos, descontos, devoluções, etc.).
@@ -9,7 +9,7 @@ Fluxo Normal - Registro e Monitoramento de Transações Financeiras:
 7. Após a confirmação, o sistema registra a transação no banco de dados financeiro.
 8. Os dados da transação são atualizados em tempo real e podem ser monitorados pelos usuários autorizados.
 
-Fluxos de Eventos de Exceção - Registro e Monitoramento de Transações Financeiras:
+Gestão financeira - Fluxo de exceção:
 
 1. Dados Inválidos:
    - Se os dados inseridos pelo usuário forem inválidos, incompletos ou inconsistentes, o sistema exibe uma mensagem de erro específica indicando o problema.
@@ -21,7 +21,7 @@ Fluxos de Eventos de Exceção - Registro e Monitoramento de Transações Financ
 
 ---
 
-Fluxo Normal - Controle de Acesso e Permissões:
+6. Controle de acesso e permissões - Fluxo normal:
 
 1. O usuário faz login no sistema com suas credenciais.
 2. Após o login bem-sucedido, o sistema autentica o usuário e identifica sua função ou cargo dentro da organização.
@@ -29,7 +29,7 @@ Fluxo Normal - Controle de Acesso e Permissões:
 4. O usuário navega pelo sistema e realiza operações de acordo com as permissões associadas à sua função.
 5. O sistema verifica continuamente as permissões do usuário durante a interação com o sistema, garantindo que apenas ações relevantes sejam permitidas.
 
-Fluxos de Eventos de Exceção - Controle de Acesso e Permissões:
+Controle de acesso e permissões - Fluxo exceção:
 
 1. Acesso não Autorizado:
    - Se um usuário tentar acessar uma área ou funcionalidade para a qual não possui permissão, o sistema exibe uma mensagem de erro informando que o acesso não é permitido.
