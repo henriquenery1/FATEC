@@ -19,6 +19,10 @@ Gestão financeira - Fluxo de exceção:
    - Se ocorrer uma falha durante o registro da transação (por exemplo, erro de conexão com o banco de dados), o sistema exibe uma mensagem de erro indicando a indisponibilidade temporária.
    - O sistema registra o problema automaticamente para investigação posterior e informa os usuários sobre a situação.
 
+3. Transação Duplicada:
+    - Se o sistema detectar que uma transação semelhante já foi registrada anteriormente (por exemplo, mesma data, valor e cliente), exibe uma mensagem de aviso indicando uma possível duplicação.
+    - O usuário é informado sobre a transação existente e pode optar por revisar ou cancelar o registro.
+
 ---
 
 6. Controle de acesso e permissões - Fluxo normal:
@@ -33,12 +37,14 @@ Controle de acesso e permissões - Fluxo exceção:
 
 1. Acesso não Autorizado:
    - Se um usuário tentar acessar uma área ou funcionalidade para a qual não possui permissão, o sistema exibe uma mensagem de erro informando que o acesso não é permitido.
-   - O usuário é redirecionado para uma área adequada do sistema ou orientado a solicitar acesso adicional aos administradores, se necessário.
 
-2. Permissões Insuficientes para uma Ação:
-   - Se um usuário tentar realizar uma ação específica (por exemplo, editar dados, aprovar transações) para a qual não possui permissão suficiente, o sistema exibe uma mensagem indicando que a ação não pode ser concluída devido às permissões limitadas.
-   - O sistema pode oferecer opções alternativas ou orientar o usuário a solicitar permissões adicionais aos administradores.
+2. Problemas de Identificação da Função do Usuário:
+    - Se o sistema não conseguir identificar corretamente a função ou cargo do usuário após o login, exibe uma mensagem de erro indicando a situação.
+    - O usuário pode ser redirecionado para uma área de suporte ou instruído a contatar o administrador do sistema para resolver o problema.
 
-3. Gerenciamento de Permissões:
-   - Os administradores do sistema podem modificar as permissões dos usuários, atribuindo ou revogando níveis de acesso conforme necessário.
-   - Caso ocorra um erro durante a modificação das permissões, o sistema registra o problema e notifica os administradores sobre a falha.
+3. Permissões Insuficientes para uma Ação:
+   - Se um usuário tentar realizar uma ação específica (por exemplo: editar dados) para a qual não possui permissão suficiente, o sistema exibe uma mensagem indicando que a ação não pode ser concluída devido às permissões limitadas.
+
+4. Expiração da Sessão por Inatividade:
+    - Se a sessão de um usuário expirar devido a inatividade prolongada, o sistema deve encerrar a sessão automaticamente.
+    - O usuário é redirecionado para a página de login e informado sobre a necessidade de iniciar uma nova sessão.
