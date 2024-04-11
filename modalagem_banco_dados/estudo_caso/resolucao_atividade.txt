@@ -40,5 +40,33 @@ qual empregado recebeu o pagamento
 2. Analisar e selecionar as entidades que realmente fazem parte do modelo, 
 excluindo as demais. 
 
-Produto -> Clientes (n;n)
-Produto -> Clientes (n;n)
+1. Produtos: Pães, frios, laticínios, lanches, refrigerantes, sorvetes, balas, chicletes, chocolates, frango assado.
+2. Funcionários: Identificação dos funcionários
+3. Funções dos funcionários: Caixa, Padeiro, atendente, auxiliar de limpeza.
+4. Clientes: Identificação dos clientes
+5. Comandas: Cartão que registra compras 
+6. Registros de Vendas: Preços dos produtos, Valor total da compra, Forma de pagamento escolhida, Recebimento do pagamento, Produtos vendidos, Quantidade vendida.
+7. Fornecedores: Identificação dos fornecedores
+
+3. Analisar os relacionamentos entre as entidades. 
+
+1. Produtos <-> Comandas:
+   - Os produtos são vendidos e registrados nas transações de venda.
+
+2. Funcionários <-> Registros de Vendas:
+   - Os funcionários podem estar envolvidos nas vendas e registrar as transações.
+
+3. Funções dos Funcionários <-> Funcionários:
+   - Cada funcionário desempenha uma função específica, como padeiro, atendente ou auxiliar de limpeza.
+
+4. Clientes <-> Comandas:
+   - Os clientes são associados a uma comanda para registrar suas compras.
+
+5. Comandas <-> Registros de Vendas:
+   - As comandas são usadas para registrar as compras dos clientes, que são então registradas nos registros de vendas.
+
+6. Produtos <-> Comandas
+    - 
+
+7. Produtos <-> Fornecedores
+    - 
