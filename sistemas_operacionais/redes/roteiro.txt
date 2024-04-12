@@ -1,0 +1,30 @@
+Roteiro sobre Normas de Cabeamento Estruturado Ethernet:
+
+Motivos para Normatização:
+1. Interoperabilidade: Garantir que equipamentos de diferentes fabricantes possam funcionar juntos sem problemas.
+2. Desempenho Consistente: Assegurar que a rede opere dentro dos parâmetros adequados para velocidade e qualidade de transmissão.
+3. Facilidade de Manutenção: Padronização facilita o diagnóstico e reparo de problemas na rede.
+4. Segurança e Confiabilidade: Normas ajudam a reduzir interferências e aumentar a estabilidade da conexão.
+
+Principais Normas e Padrões:
+1. TIA/EIA-568: Padrão utilizado na América do Norte.
+   - Define requisitos para cabeamento de telecomunicações em edifícios comerciais.
+   - Especifica tipos de cabos, conectores e disposição física dos componentes.
+
+2. ISO/IEC 11801: Norma internacional para cabeamento estruturado.
+   - Aplicável globalmente e compatível com várias tecnologias de rede.
+   - Define classes de desempenho para cabos de par trançado e fibras ópticas.
+
+3. IEEE 802.3 (Ethernet):
+   - Especifica padrões para redes Ethernet, incluindo cabeamento e protocolos de comunicação.
+   - Define velocidades de transmissão, como 10BASE-T, 100BASE-TX, 1000BASE-T, etc.
+
+Propósito das Normas:
+1. Uniformidade: Garantir consistência na implementação de redes, independentemente do local ou fabricante.
+2. Compatibilidade: Promover a interoperabilidade entre dispositivos de diferentes fabricantes.
+3. Qualidade e Confiabilidade: Estabelecer critérios técnicos para garantir desempenho e segurança da rede.
+4. Facilitar o Gerenciamento: Padronização simplifica o planejamento, instalação e manutenção de redes de cabeamento.
+
+Conclusão:
+- Resumo da importância das normas de cabeamento estruturado na garantia de redes confiáveis, eficientes e interoperáveis, além de facilitar a manutenção e expansão das infraestruturas de rede.
+
