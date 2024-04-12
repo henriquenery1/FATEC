@@ -57,7 +57,7 @@ excluindo as demais.
    - Os funcionários podem estar envolvidos nas vendas e registrar as transações.
 
 3. Funções dos Funcionários <-> Funcionários:
-   - Cada funcionário desempenha uma função específica, como padeiro, atendente ou auxiliar de limpeza.
+   - Cada funcionário desempenha uma função específica.
 
 4. Clientes <-> Comandas:
    - Os clientes são associados a uma comanda para registrar suas compras.
@@ -65,8 +65,50 @@ excluindo as demais.
 5. Comandas <-> Registros de Vendas:
    - As comandas são usadas para registrar as compras dos clientes, que são então registradas nos registros de vendas.
 
-6. Produtos <-> Comandas
-    - 
+6. Produtos <-> Fornecedores
+    - Fornecedor Fornece produto
 
-7. Produtos <-> Fornecedores
-    - 
+7. Comandas <-> Funcionários:
+    - Funcionário registra a comanda
+
+4. Definir a cardinalidade dos relacionamentos. 
+    Produtos <-> Comandas (n;1)
+    Funcionários <-> Registros de Vendas (1;n)
+    Funções dos Funcionários <-> Funcionários (1;n)
+    Clientes <-> Comandas (1;1)
+    Comandas <-> Registros de Vendas (1;1)
+    Produtos <-> Fornecedores (n;n)
+
+5. Definir os atributos das entidades e relacionamentos com campos e também as chaves primária e estrangeira (se houver).
+    Produtos: IDProduto (pk), Nome, Descrição, Preço, Estoque 
+    Funcionários: IDFuncionário (pk), Nome, Cargo(fk)
+    Funções dos funcionários:  IDFunção (pk), Nome da função, IDFuncionário(fk)
+    Clientes:  IDCliente (pk), Nome, E-mail, Telefone, CPF.
+    Comandas:  IDComanda (pk), IDCliente (fk), IDFuncionário (fk), IDProduto (fk), Quantidade de produtos, Status
+    Registros de vendas: IDVenda (pk), IDComanda (fk), Quantidade, DataHora, ValorTotal.
+    Fornecedores: IDFornecedor (pk), Nome, Endereço, E-mail, Telefone, CNPJ.
+
+
+6. Definir as restrições de integridade dos relacionamentos. 
+1. Produtos:
+   - Relacionamento com Comandas: A restrição deve garantir que o ID da comanda exista na tabela de Produtos.
+   - Relacionamento com Fornecedores: A restrição deve garantir que o ID do fornecedor exista na tabela de Produtos.
+
+2. Funcionários:
+   - Relacionamento com Funções dos funcionários: A restrição deve garantir que o ID da função de funcionários exista na tabela de Funcionários.
+
+3. Funções dos funcionários:
+   - Relacionamento com Funcionários: A restrição deve garantir que o ID do funcionário deve existir na tabela de Funções dos funcionários.
+
+4. Clientes:
+   - Relacionamento com Comandas: A restrição deve garantir que o ID da comanda deve existir na tabela de Clientes.
+
+5. Comandas:
+   - Relacionamento com Clientes: A restrição deve garantir que o ID do cliente deve existir na tabela de Comandas.
+
+6. Registros de vendas:
+   - Relacionamento com Comandas: A restrição deve garantir que o ID da comanda exista na tabela de Registros de vendas.
+
+7. Fornecedores:
+   - Relacionamento com Produtos: A restrição deve garantir que o ID do produto exista na tabela de Fornecedores.
+
