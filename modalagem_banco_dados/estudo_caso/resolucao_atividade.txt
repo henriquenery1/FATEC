@@ -37,8 +37,7 @@ por qual valor
 além de qual empregado registrou a venda  
 qual empregado recebeu o pagamento
 
-2. Analisar e selecionar as entidades que realmente fazem parte do modelo, 
-excluindo as demais. 
+2. Analisar e selecionar as entidades que realmente fazem parte do modelo, excluindo as demais. 
 
 1. Produtos: Pães, frios, laticínios, lanches, refrigerantes, sorvetes, balas, chicletes, chocolates, frango assado.
 2. Funcionários: Identificação dos funcionários
@@ -104,7 +103,7 @@ excluindo as demais.
    - Relacionamento com Comandas: A restrição deve garantir que o ID da comanda deve existir na tabela de Clientes.
 
 5. Comandas:
-   - Relacionamento com Clientes: A restrição deve garantir que o ID do cliente deve existir na tabela de Comandas.
+   - Relacionamento com Registro de vendas: A restrição deve garantir que o ID do registro de vendas deve existir na tabela de Comandas.
 
 6. Registros de vendas:
    - Relacionamento com Comandas: A restrição deve garantir que o ID da comanda exista na tabela de Registros de vendas.
