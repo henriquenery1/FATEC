@@ -1,0 +1,20 @@
+projetos e consultores. 
+
+Projeto:
+    - o código
+    - nome e endereço da empresa que solicitou o projeto
+    - o número do projeto
+    - a data de início e término do projeto
+    - o valor do projeto
+    - o número
+    - o nome
+    - número do documento de identidade dos consultores
+    - especialização dos consultores 
+    - as horas que trabalharam
+    - a função que o consultor exerceu(líder ou membro)
+    - ID do consultor
+
+Consultores:
+    - ID
+    - Nome
+    - Email
