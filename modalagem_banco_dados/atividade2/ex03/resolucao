@@ -1,0 +1,29 @@
+Entidades: Clientes, Automoveis, Ocorrencias:
+
+---
+
+Clientes:
+    - ID_cliente (pk)
+    - código
+    - nome
+    - RG
+    - CPF
+    - endereço
+    - telefone
+
+
+Automoveis:
+    - ID_automovel (pk)
+    - placa
+    - código RENAVAN
+    - Fabricante
+    - modelo
+    - ano
+    - ID_cliente (fk)
+
+Ocorrencias:
+    - numero_ocorrencia (pk)
+    - data
+    - local
+    - descrição
+    - ID_automovel (fk)
