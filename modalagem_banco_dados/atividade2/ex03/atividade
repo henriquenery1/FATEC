@@ -1,0 +1,7 @@
+3 - Construir um banco de dados para uma empresa de seguros de automóveis 
+com um conjunto de clientes, onde cada um possui um certo número de automóveis. 
+
+Os dados dos clientes são código, nome, RG, CPF, endereço e telefone. 
+Do carro deve-se armazenar  a placa, código RENAVAN, Fabricante, modelo e ano. 
+Associado a cada automóvel há um histórico de ocorrências. 
+Cada ocorrência deve ter um número (único), data, local e descrição. 

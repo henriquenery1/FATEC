@@ -1,0 +1,15 @@
+2 - Construa um modelo de entidade e relacionamentos para um banco de dados de uma empresa 
+contendo tipo de produto, fornecedor, cliente, venda e loja. Suponha que:
+Um tipo de produto pode ser fornecido por vários fornecedores 
+e um fornecedor pode fornecer vários tipos de produto;
+
+A venda a um cliente pode conter vários tipos de produtos 
+e um tipo de produto pode fazer parte de várias vendas; 
+A venda a um cliente é realizada em uma das lojas da empresa;
+
+Cada produto numa venda tem preço tem preço e quantidade;
+Cada venda tem número da nota fiscal, data e valor total;
+Cada tipo de produto tem código, nome e descrição;
+Cada cliente tem código, nome e endereço;
+Cada fornecedor tem código, nome, CNPJ e endereço;
+Cada loja tem código, nome e CNPJ.
