@@ -1,0 +1,39 @@
+Entidades e Atributos:
+
+Tipo_produto:
+- ID_tipo_produto (PK)
+- Nome
+- Descrição
+- ID_fornecedor (FK)
+
+Fornecedor:
+- ID_fornecedor (PK)
+- Nome
+- CNPJ
+- Endereço
+- ID_tipo_produto (FK)
+
+Cliente:
+- ID_cliente (PK)
+- Nome
+- Endereço
+
+Loja:
+- ID_loja (PK)
+- Nome
+- CNPJ
+
+Venda:
+- NúmeroNotaFiscal (PK)
+- Data
+- Valor_total
+- ID_loja (FK)
+- ID_cliente (FK)
+- ID_produto_vendido (FK)
+
+Produto_vendido:
+- ID_produto_vendido (PK)
+- Preco
+- Quantidade
+- Número_nota_fiscal (FK)
+- ID_tipo_produto (FK)
