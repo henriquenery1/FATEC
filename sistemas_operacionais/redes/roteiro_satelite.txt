@@ -1,0 +1,33 @@
+1. Fontes de Energia
+- Painéis solares fotovoltaicos são a principal fonte de energia em satélites.
+
+2. Reguladores de Carga
+- Reguladores de carga mantêm a estabilidade do sistema.
+
+3. Baterias
+- Baterias de íons de lítio são comumente usadas em satélites.
+
+4. Sistemas de Gerenciamento de Carga (EMS)
+- EMS monitora e otimiza o uso de energia.
+
+---
+
+Qualquer forma de comunicação, vai envolver um emissor,
+um receptor e um meio pelo qual isso é feito.
+
+Com a comunicação via satélite, a premissa é a mesma, 
+onde eles distribuem as informações por meio de ondas eletromagnéticas
+que são “traduzidas” ou “interpretadas” pelos emissores e receptores dessas informações. 
+
+Portanto, o satélite, seria o meio pelo qual a comunicação entre dois dispositivos, 
+sendo um que envia sinais, e o outro, quem recebe, é feita.
+
+Essa comunicação pode ser classificada em dois tipos, 
+sendo elas a simplex, que consiste em um serviço unidirecional, ou seja, 
+há apenas a recepção por uma das partes, assim como o envio. 
+Não há dispositivos que realizem as duas coisas na comunicação Simplex, 
+
+o que já ocorre na comunicação Duplex, 
+que por sua vez, é um serviço de comunicação bidirecional, ou seja, 
+a troca de informações entre os dispositivos consiste em ambos enviarem
+e receberem informações entre si.
