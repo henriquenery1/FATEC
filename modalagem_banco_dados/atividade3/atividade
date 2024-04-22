@@ -1,0 +1,23 @@
+Considere um BD com o nome CLINICA e seus requisitos.
+ OBD deve armazenar o registro dos médicos:
+CRM(códigoúnico);
+Nome;
+Endereço;
+Telefone;
+Especialidade;
+O registro dos pacientes:
+CPF(códigoúnico);
+Nome;
+Endereço;
+Telefone;
+
+As consultas:
+Cada consulta é realizada por um médico e para um paciente;
+Deve possuir um código identificador;
+A data da consulta;
+Observações
+
+Os exames passados nas consultas:
+Código identificador;
+Nome do exame;
+Resultado.
