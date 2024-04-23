@@ -1,7 +1,5 @@
 # PowerGenda
 
----
-
 **Descrição:**
 Este é um aplicativo desenvolvido como parte de uma prova para a matéria de desenvolvimento web. 
 
