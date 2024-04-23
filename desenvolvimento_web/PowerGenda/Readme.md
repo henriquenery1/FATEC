@@ -1,8 +1,5 @@
 # PowerGenda
 
-**Descrição:**
-Este é um aplicativo desenvolvido como parte de uma prova para a matéria de desenvolvimento web. 
-
 **Descrição do Aplicativo:**
 
 É um aplicativo desenvolvido no Power Apps com o objetivo de facilitar o gerenciamento de compromissos. Com uma interface intuitiva e funcionalidades úteis, o PowerGenda oferece uma maneira simples e eficaz de acompanhar e organizar sua agenda.
@@ -11,12 +8,12 @@ Este é um aplicativo desenvolvido como parte de uma prova para a matéria de de
 
 **Desenvolvedores:**
 - [Diogo Peres](https://github.com/DiogoMartins9)
-- [Enzo Dionisio](Insira o link do perfil do desenvolvedor, se aplicável)
+- [Enzo Dionisio]()
 - [Henrique Nery](https://github.com/henriquenery1)
 
 ---
 
-Principais funcionalidades:
+**Principais funcionalidades:**
 - **Calendário:** O aplicativo apresenta um calendário.
 - **Adição de Eventos:** Os usuários podem adicionar facilmente novos eventos, especificando detalhes como data e descrição.
 - **Cálculo de Dias Restantes:** Oferece uma função de cálculo automático que mostra a quantidade de dias que faltam para cada evento, ajudando os usuários a se manterem atualizados com seus compromissos.
