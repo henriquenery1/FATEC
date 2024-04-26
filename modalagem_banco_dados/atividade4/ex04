@@ -1,0 +1,73 @@
+Faça um banco de dados para uma companhia. A companhia é organizada em departamentos. 
+Cada departamento tem um nome e um número. 
+
+Além disto, um departamento controla vários projetos, dada um dos quais com um nome, 
+um número de identificação e o período de tempo no qual deve ser desenvolvido. 
+Na referida companhia, cada projeto somente pode ser desenvolvido por um departamento específico.
+
+Existem somente três tipos de funcionários que trabalham na companhia: pesquisador, secretário e de limpeza. 
+Para os pesquisadores, deseja-se armazenar: o nome, endereço, o sexo, a data de aniversário, o salário e a área de atuação. 
+Para os secretários, deseja-se armazenar: o nome, o endereço, o sexo, a data de aniversário, o salário e o grau de escolaridade. 
+Já para os funcionários de limpeza, deseja-se armazenar:  o nome, o endereço, o sexo, a data de aniversário, o salário, o cargo e a jornada de trabalho. 
+Os cargos dos funcionários responsáveis pela limpeza são hierárquicos. 
+
+Assim deseja-se armazenar também, para cada funcionário de limpeza, informações sobre o funcionário que o gerencia. 
+Os funcionários da companhia são identificados por meio de um código de identificação, e podem estar associados a apenas um departamento. 
+Funcionários que são pesquisadores podem trabalhar em diversos projetos, 
+independetemente desses projetos estarem sendo desenvolvidos no mesmo departamento no qual o empregado está associado. 
+
+Deve-se armazenar o número de horas semanais trabalhadas por cada pesquisador em cada projeto no qual ele trabalha. 
+
+Deve-se armazenar também informações sobre os dependentes da cada funcionário para propósitos  de ajuda família. 
+Deve-se armazenar o nome, o sexo e a data de aniversário, além do grau de parentesco com o funcionário. 
+
+---
+
+Tabela "Funcionários":
+ID_funcionário (chave primária)
+Nome
+Endereço
+Sexo
+Data_aniversário
+Salário
+Departamento_ID (chave estrangeira referenciando a tabela de Departamentos)
+
+1. Tabela "Departamentos":
+   - ID_departamento (chave primária)
+   - Nome_departamento
+   - Número_departamento
+
+2. Tabela "Projetos":
+   - ID_projeto (chave primária)
+   - Nome_projeto
+   - Número_identificação
+   - Período_desenvolvimento
+   - Departamento_ID (chave estrangeira referenciando a tabela de Departamentos)
+
+3. Tabela "Pesquisadores":
+   - ID_pesquisador (chave primária, também é chave estrangeira referenciando a tabela de Funcionários)
+   - Área_atuação
+
+4. Tabela "Secretários":
+   - ID_secretário (chave primária, também é chave estrangeira referenciando a tabela de Funcionários)
+   - Grau_escolaridade
+
+5. Tabela "Funcionários_Limpeza":
+   - ID_limpeza (chave primária, também é chave estrangeira referenciando a tabela de Funcionários)
+   - Cargo
+   - Jornada_trabalho
+   - Funcionário_gerente (chave estrangeira referenciando a tabela de Funcionários_Limpeza)
+
+6. Tabela "Horas_Trabalhadas":
+   - ID_horas (chave primária)
+   - Pesquisador_ID (chave estrangeira referenciando a tabela de Pesquisadores)
+   - Projeto_ID (chave estrangeira referenciando a tabela de Projetos)
+   - Horas_semanais
+
+7. Tabela "Dependentes":
+   - ID_dependente (chave primária)
+   - Funcionário_ID (chave estrangeira referenciando a tabela de Funcionários)
+   - Nome
+   - Sexo
+   - Data_aniversário
+   - Grau_parentesco

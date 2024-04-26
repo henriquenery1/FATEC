@@ -1,0 +1,43 @@
+2 - Construir um BD sobre alunos de uma universidade. O BD deve possuir condições de responder as seguintes questões:
+Dado o número do aluno, deseja -se saber:
+em quais disciplinas está atualmente matriculado
+quais disciplinas já concluiu
+qual o curso deste aluno
+dados pessoais sobre o aluno
+
+Dado o código de um departamento, deseja-se saber: 
+curso que estão sob a responsabilidade do departamento
+detalhes sobre o departamento
+
+Dado um curso, deseja-se saber: 
+disciplinas obrigatórias do curso
+disciplinas optativas do curso
+alunos desse curso
+
+Dado uma disciplina , deseja-se saber:
+alunos matriculados na disciplina
+pré-requisitos da disciplina 
+
+---
+
+Tabela "Alunos":
+ID_aluno (chave primária)
+Nome
+Curso_ID (chave estrangeira referenciando a tabela de Cursos)
+Outros dados pessoais (por exemplo, endereço, telefone, etc.)
+
+Tabela "Cursos":
+ID_curso (chave primária)
+Nome_do_curso
+Departamento_ID (chave estrangeira referenciando a tabela de Departamentos)
+Outros detalhes do curso
+
+Tabela "Disciplinas":
+ID_disciplina (chave primária)
+Nome_da_disciplina
+Curso_ID (chave estrangeira referenciando a tabela de Cursos)
+
+Tabela "Departamentos":
+ID_departamento (chave primária)
+Nome_do_departamento
+Outros detalhes do departamento
