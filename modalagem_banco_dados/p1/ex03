@@ -1,0 +1,27 @@
+Considere as seguintes informações sobre um banco de dados de uma universidade: 
+
+• Os professores têm um CPF, um nome, uma idade, uma posição e uma especialidade de pesquisa 
+• Os projetos têm um número de projeto, um nome de financiador (por exemplo, CNPQ), uma data inicial, uma data final e um orçamento 
+• Os estudantes de pós-graduação tem um CPF, um nome, uma idade e um programa de pósgraduação (por exemplo, mestrado ou doutorado)
+
+• Cada projeto é gerenciado por um professor (conhecido como pesquisador principal do projeto)
+
+• Cada projeto é conduzido por um ou mais professores (conhecidos como copesquisadores)
+
+• Os professores podem gerenciar e/ou trabalhar em múltiplos projetos
+
+• Cada projeto é conduzido por um ou mais estudantes de pós-graduação (conhecidos como os assistentes de pesquisa do projeto).
+
+Neste caso, cada estudante deve ter um professor para supervisionar seu trabalho no projeto. 
+Os alunos de pós-graduação podem trabalhar em múltiplos projetos, e, 
+neste caso, eles terão um supervisor (potencialmente diferente) para cada projeto
+
+• Os departamentos têm um número de departamento, um nome e um escritório principal
+• Os departamentos têm um professor (conhecido como chefe do departamento) que o administra
+• Os professores trabalham em um ou mais departamentos e, para cada departamento em que trabalham, 
+uma porcentagem de tempo está associada a seu trabalho
+
+• Os alunos de pós-graduação tem um departamento principal no qual estão conduzindo seu programa de pós-graduação
+• Cada estudante tem um outro estudante mais experiente (conhecido como conselheiro do aluno) 
+que o aconselha nos cursos a que deve assistir.
+
