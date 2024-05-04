@@ -1,0 +1,133 @@
+ <style type="text/css">
+ 
+ 
+ /* comentário */
+ 
+p {
+	margin-top: 3cm;
+  }
+
+body {
+	color: white;
+	font-family: arial;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h3 {font-family:Arial;
+   font-style:italic;
+   color: white;
+   font-weight:bold;
+   font-size:20px;}
+	 
+h2 {
+   background-color:black;
+   font-family:arial;
+   font-style:italic;
+   color: white;
+   text-align:center;
+   font-weight:bold;
+   font-size:40px;
+   }
+   
+.esquerda_superior {
+
+	     background-color: green;
+		 border: solid 5px;
+	     border-color: white;
+		 height: 300px;
+		 width: 600px;
+		 position: fixed;
+         top: 0px;
+         left: 0px;
+}   
+
+
+.esquerda_inferior {
+
+	     background-color: blue;
+		 border: solid 5px;
+	     border-color: white;
+		 height: 300px;
+		 width: 300px;
+		 position: fixed;
+         bottom: 0px;
+         left: 0px;
+}   
+
+.direita_superior {
+
+	     background-color: red;
+		 border: solid 5px;
+	     border-color: white;
+		 height: 300px;
+		 width: 300px;
+		 position: fixed;
+         top: 0px;
+         right: 0px;
+}   
+
+.direita_inferior {
+
+	     background-color: orange;
+		 border: solid 5px;
+	     border-color: white;
+		 height: 300px;
+		 width: 300px;
+		 position: fixed;
+         bottom: 0px;
+         right: 0px;
+}   
+   
+   
+.centro {
+ 	border: solid 5px;
+	border-color: white;
+    position: fixed;
+	height: 600px;
+	width: 600px;
+    top: 0px;
+    bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin:auto;
+	box-shadow: 0 0 50px white;
+	}
+   
+#caixa {
+	    background: white;
+        border-radius:20px; 
+        height:30px;
+        border: 4px solid;
+		}
+		
+#caixa:focus {
+	         font-size:large; 
+  	         font-family: Arial; 
+	         background: white;
+	         border: 3px solid;
+	         color: blue;
+	         box-shadow: 0 0 30px blue;
+			 }
+   
+#botao {
+	    height: 45px;
+        width: 150px; 
+	    background: black;
+	    color: yellow;
+	    font-style: arial;
+	    font-size:medium;
+	    border:2px solid;
+	    box-shadow: 0 0 6px;   
+	    border-radius:100px; 
+		}
+
+#botao:hover  {
+	           font-size:xx-large; 
+               font-family: Arial; 
+               background: black ;
+	           color: red;
+	           box-shadow: 0 0 30px red; 
+			   }
+
+</style>
