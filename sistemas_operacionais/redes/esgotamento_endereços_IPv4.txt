@@ -28,3 +28,22 @@ Fontes:
 https://esr.rnp.br/administracao-e-projeto-de-redes/open-11/
 https://pt.wikipedia.org/wiki/Exaust%C3%A3o_do_IPv4
 https://ascenty.com/blog/artigos/esgotamento-do-ipv4/
+
+---
+
+Slide 1:
+Título: Esgotamento dos endereços IPv4
+- O IPv4 foi projetado em uma época em que a internet era menor
+- Com o crescimento da rede e com mais dispositivos conectados, a demanda tem superado a oferta
+
+Slide 2:
+Título: Por que isso está acontecendo?
+- Crescimento da internet
+- Alocação ineficiente de IPv4
+- Falta de planejamento
+
+Slide 3:
+Título: O que está sendo feito?
+- Para resolver o problema foi criado o protocolo IPv6
+- O IPv6 oferece um número muito maior de endereços
+- A migração para o IPv6 está em andamento.
