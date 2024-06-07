@@ -1,0 +1,30 @@
+O esgotamento dos endereços IPv4 é um fenômeno que está afetando diretamente a estrutura da internet. 
+O IPv4 foi projetado em uma época em que a internet era muito menor. 
+Com o crescimento exponencial da rede e com cada vez mais dispositivos conectados, a demanda tem superado a oferta disponível.
+
+Imagine a internet como um grande bairro, e cada casa precisa de um endereço único para receber cartas e encomendas. Os endereços IPv4 são como esses endereços: cada dispositivo conectado à internet precisa de um para se comunicar com outros.
+
+O problema é que o número de endereços IPv4 é limitado, e com o crescimento da internet, eles estão acabando. É como se o bairro estivesse ficando lotado, e não houvesse mais casas novas com endereço.
+
+Por que isso está acontecendo?
+São vários os motivos que levaram ao esgotamento dos endereços IPv4:
+
+- Crescimento da internet: Cada vez mais pessoas, dispositivos e serviços se conectam à internet, aumentando a demanda por endereços.
+
+- Alocação ineficiente: No passado, os endereços IPv4 eram alocados de forma ineficiente, com muitos sendo desperdiçados.
+
+- Falta de planejamento: O protocolo IPv4 foi criado em 1980, quando a internet era bem menor, e não se previa a explosão de dispositivos conectados.
+
+O que está sendo feito?
+
+- Para resolver o problema do esgotamento dos endereços IPv4, foi criado o protocolo IPv6. 
+O IPv6 oferece um número muito maior de endereços, o que garante que haverá endereços suficientes para os dispositivos no futuro.
+
+- A migração para o IPv6 está em andamento. Muitos dispositivos e serviços ainda não suportam o IPv6, o que pode dificultar a adoção completa do novo protocolo.
+
+---
+
+Fontes:
+https://esr.rnp.br/administracao-e-projeto-de-redes/open-11/
+https://pt.wikipedia.org/wiki/Exaust%C3%A3o_do_IPv4
+https://ascenty.com/blog/artigos/esgotamento-do-ipv4/
