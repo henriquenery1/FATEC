@@ -75,10 +75,10 @@ void main(void) {
   double salarioLiquido = salarioBruto - taxaInss - impostoRenda + salarioFamilia;
 
 
-  printf("O salario bruto: %lf\n", salarioBruto);
-  printf("O desconto do inss: %lf\n", taxaInss);
-  printf("O imposto de renda: %lf\n", impostoRenda);
-  printf("O salario familia: %lf\n", salarioFamilia);
-  printf("O salario liquido: %lf\n", salarioLiquido);
+  printf("O salario bruto: %.2lf\n", salarioBruto);
+  printf("O desconto do inss: %.2lf\n", taxaInss);
+  printf("O imposto de renda: %.2lf\n", impostoRenda);
+  printf("O salario familia: %.2lf\n", salarioFamilia);
+  printf("O salario liquido: %.2lf\n", salarioLiquido);
   
 }
