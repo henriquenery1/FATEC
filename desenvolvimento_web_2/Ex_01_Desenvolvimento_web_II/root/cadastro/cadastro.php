@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Funcionários</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 
 <body>
@@ -20,12 +21,12 @@
 
     <label>Cargo</label>
     <select name="cargos" required> 
-      <option value="Estagiário">Estagiario</option>
+      <option value="Estagiario">Estagiario</option>
       <option value="Desenvolvedor">Desenvolvedor</option>
-      <option value="Rapaz(riga) do café">Barista</option>
-      <option value="muié da limpeza">Tia da limpeza</option>
+      <option value="Rapaz(riga) do cafe">Barista</option>
+      <option value="muie da limpeza">Tia da limpeza</option>
       <option value="Professor">Professor(a)</option>
-      <option value="Médico">Médico(a)</option>
+      <option value="Medico">Médico(a)</option>
     </select>
 
     <label>Quantidade de salários minímos</label>
@@ -33,5 +34,9 @@
       <button type="submit">Cadastrar</button>
 
   </form>  
+
+  <center>
+      <h1><a href="listagem.php">LISTA</a></h1>
+  </center>
 </body>
 </html>

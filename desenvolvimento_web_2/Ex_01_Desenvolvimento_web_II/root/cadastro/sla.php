@@ -12,11 +12,26 @@ $salario_bruto = $qts_salarios_min * $salario_min;
 $inss=$salario_bruto-($salario_bruto*0.89);
 
 if ($salario_bruto>1550){
-    $salario_liquido=$salario_bruto*0.89;
+    $salario_liquido=$salario_bruto-$inss;
+} else {
+    $salario_liquido=$salario_bruto;
 }
-
 
     mysql_query ("INSERT INTO funcionarios (nome, data_admissao, cargo, qtde_salarios, salario_bruto, inss, salario_liquido) VALUES ('$nome_funcionario', '$data_admissao', '$cargo', '$qts_salarios_min','$salario_bruto','$inss','$salario_liquido')");
 
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1><a href="cadastro.php">VOLTAR</a></h1>
+    </center>
+    
+</body>
+</html>
