@@ -83,14 +83,18 @@ void bubbleSort(Funcionario* funcionarios[], int tamanho) {
 }
 
 void printFuncionarios(Funcionario* funcionarios[], int tamanho) {
+    printf("%-10s %-20s %-15s %-15s %-15s %-15s\n", "Código", "Nome", "Tipo Salário", "Salário Base", "Número Filhos", "Salário Bruto");
+    printf("-------------------------------------------------------------------------------\n");
+
     for (int i = 0; i < tamanho; i++) {
-        printf("Código: %d\n", funcionarios[i]->codigo);
-        printf("Nome: %s\n", funcionarios[i]->nome);
-        printf("Tipo de Salário: %d\n", funcionarios[i]->tipoSalario);
-        printf("Salário Base: %.2lf\n", funcionarios[i]->salarioBase);
-        printf("Número de Filhos: %d\n", funcionarios[i]->numeroFilhos);
-        printf("Salário Bruto: %.2lf\n", funcionarios[i]->salarioBruto);
-        printf("-----------------------------------------\n");
+        printf("%-10d %-20s %-15d %-15.2lf %-15d %-15.2lf\n",
+            funcionarios[i]->codigo,
+            funcionarios[i]->nome,
+            funcionarios[i]->tipoSalario,
+            funcionarios[i]->salarioBase,
+            funcionarios[i]->numeroFilhos,
+            funcionarios[i]->salarioBruto
+        );
     }
 }
 
