@@ -1,0 +1,14 @@
+CREATE TABLE PRODUTOS
+(CodProd int,
+Unidade char(4),
+Descricao varchar(20),
+Valor_unit numeric(9,2),
+Data_cad datetime);
+
+INSERT INTO PRODUTOS VALUES
+(1, 'Lata', 'Massa Corrida', 27.50, '20181003');
+
+INSERT INTO PRODUTOS VALUES
+(2, 'teste', 'tinta', 180.50, '20181003');
+(3, 'um', 'lixa', 250.50, '20221006');
+(4, 'dois', 'lixa grossa', 21.60, '20271007');
