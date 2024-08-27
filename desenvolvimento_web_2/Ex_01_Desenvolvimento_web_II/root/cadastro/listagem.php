@@ -1,85 +1,84 @@
 <?php
 
+session_start();
+
 include 'conexao.php';
 
-if(isset($_POST['busca_nome']) != '') {
-	$sql = mysql_query("select * from funcionarios where nome like  '{$_POST['busca_nome']}%' order by nome asc");
+
+$busca_nome = isset($_POST['busca_nome']) ? $_POST['busca_nome'] : '';
+if ($busca_nome != '') {
+    $busca_nome = mysql_real_escape_string($busca_nome);
+    $sql = mysql_query("SELECT * FROM funcionarios WHERE nome LIKE '{$busca_nome}%' ORDER BY nome ASC");
 } else {
-	$sql = mysql_query("select * from funcionarios order by nome asc");
+    $sql = mysql_query("SELECT * FROM funcionarios ORDER BY nome ASC");
 }
 
-
-if(isset($_GET['apagar'])){
-	$sql = mysql_query("delete from funcionarios where nome=". $_GET['apagar']);
-	 echo "<br>";
-	 echo "<center>";
-	 echo "<hr>";
-	 echo "USUARIO EXCLUIDO COM SUCESSO!!!";
-	 echo "<br>";
-	 echo "<br>";
-	 echo "<a href=\"listagem.php\">VOLTAR</a>"; 
-	 echo "<hr>";
-	return false;
+if (isset($_GET['apagar'])) {
+    $nome = mysql_real_escape_string($_GET['apagar']);
+    mysql_query("DELETE FROM funcionarios WHERE nome='{$nome}'");
+    
+    $_SESSION['message'] = "Usuário excluído com sucesso!";
+    
+    header("Location: listagem.php");
+    exit();
 }
 
 ?>
 
-<html>
-<body>	  
-<center>
-<form name="form1" method="POST" action="listagem.php">
-DIGITE UM USUARIO: <input type="text" name="busca_nome"><input type="submit" value="FILTRAR">
-</form>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Funcionários</title>
+    <link href="style_listagem.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+    <div class="container">
+        <h1>Listagem de Funcionários</h1>
 
+        <?php
+        if (isset($_SESSION['message'])) {
+            echo "<div class='alert success'>{$_SESSION['message']}</div>";
+            unset($_SESSION['message']);
+        }
+        ?>
 
-<table border="1" align="center">
-		    <tr>
-			<th colspan="9e" bgcolor="darkblue">LISTAGEM DE CONTAS CADASTRADAS</th>
-			</tr>
+        <form name="form1" method="POST" action="listagem.php">
+            DIGITE UM USUÁRIO: <input type="text" name="busca_nome">
+            <input type="submit" value="FILTRAR">
+        </form>
 
-			<th bgcolor="red">Registro</th>
-			<th bgcolor="red">Nome</th>
-			<th bgcolor="red">Data de admissao</th>
-			<th bgcolor="red">Cargo</th>
-			<th bgcolor="red">Quantidade salario minimos</th>
-			<th bgcolor="red">INSS</th>
-			<th bgcolor="red">Salario bruto</th>
-			<th bgcolor="red">Salario liquido</th>
-			<th bgcolor="red">APAGAR</th>
-			</tr>
+        <table>
+            <tr>
+                <th>Registro</th>
+                <th>Nome</th>
+                <th>Data de Admissão</th>
+                <th>Cargo</th>
+                <th>Quantidade Salários Mínimos</th>
+                <th>INSS</th>
+                <th>Salário Bruto</th>
+                <th>Salário Líquido</th>
+                <th>Excluir</th>
+            </tr>
+            <?php while ($linha = mysql_fetch_assoc($sql)) { ?>
+                <tr>
+                    <td><?php echo htmlspecialchars($linha['registro']); ?></td>
+                    <td><?php echo htmlspecialchars($linha['nome']); ?></td>
+                    <td><?php echo htmlspecialchars($linha['data_admissao']); ?></td>
+                    <td><?php echo htmlspecialchars($linha['cargo']); ?></td>
+                    <td><?php echo htmlspecialchars($linha['qtde_salarios']); ?></td>
+                    <td><?php echo htmlspecialchars($linha['inss']); ?></td>
+                    <td><?php echo htmlspecialchars($linha['salario_bruto']); ?></td>
+                    <td><?php echo htmlspecialchars($linha['salario_liquido']); ?></td>
+                    <td><a href="listagem.php?apagar=<?php echo urlencode($linha['nome']); ?>" onclick="return confirm('Tem certeza de que deseja excluir este usuário?');">Excluir</a></td>
+                </tr>
+            <?php } ?>
+        </table>
 
-			<tr>
-			<?php
-				while($linha = mysql_fetch_assoc($sql)) {
-			?>
-			<td align="center"><?php echo $linha['registro']; ?></td>
-			<td align="center"><?php echo $linha['nome']; ?></td>
-			<td align="center"><?php echo $linha['data_admissao']; ?></td>
-			<td align="center"><?php echo $linha['cargo']; ?></td>
-
-			<td align="center"><?php echo $linha['qtde_salarios']; ?></td>
-			<td align="center"><?php echo $linha['inss']; ?></td>
-			<td align="center"><?php echo $linha['salario_bruto']; ?></td>
-			<td align="center"><?php echo $linha['salario_liquido']; ?></td>
-
-
-	       <th><a href="listagem.php?apagar='<?php echo $linha['nome']; ?>'">APAGAR</a></th>
-           </tr>
-
-            			
-			<?php  } 
-			  
-			  echo "<br>";
-			  echo "<center>";
-			  echo "<hr>";
-		      echo "<a href=\"cadastro.php\">VOLTAR PARA O CADASTRO</a>"; 
-			  echo "<hr>";
-			?>
-</table>
+        <div class="centered">
+            <a href="cadastro.php">Voltar para o Cadastro</a>
+        </div>
+    </div>
 </body>
 </html>
-
-
-
-
-

@@ -9,12 +9,13 @@ $qts_salarios_min = $_POST['qtd_salarios_min'];
 
 $salario_min=1412;
 $salario_bruto = $qts_salarios_min * $salario_min;
-$inss=$salario_bruto-($salario_bruto*0.89);
 
 if ($salario_bruto>1550){
+    $inss=$salario_bruto-($salario_bruto*0.89);
     $salario_liquido=$salario_bruto-$inss;
 } else {
     $salario_liquido=$salario_bruto;
+    $inss = 0;
 }
 
     mysql_query ("INSERT INTO funcionarios (nome, data_admissao, cargo, qtde_salarios, salario_bruto, inss, salario_liquido) VALUES ('$nome_funcionario', '$data_admissao', '$cargo', '$qts_salarios_min','$salario_bruto','$inss','$salario_liquido')");
