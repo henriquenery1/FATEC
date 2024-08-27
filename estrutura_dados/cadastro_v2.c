@@ -84,7 +84,7 @@ void bubbleSort(Funcionario* funcionarios[], int tamanho) {
 
 void printFuncionarios(Funcionario* funcionarios[], int tamanho) {
     printf("%-10s %-20s %-15s %-15s %-15s %-15s\n", "Código", "Nome", "Tipo Salário", "Salário Base", "Número Filhos", "Salário Bruto");
-    printf("-------------------------------------------------------------------------------\n");
+    printf("------------------------------------------------------------------------------------------\n");
 
     for (int i = 0; i < tamanho; i++) {
         printf("%-10d %-20s %-15d %-15.2lf %-15d %-15.2lf\n",
@@ -188,14 +188,14 @@ int main(void) {
 
         appendFuncionario(&head, codigo, tipoSalario, salarioBase, numeroFilhos, nome);
 
-        printf("\n\n-#-#-#-#-#-#-#-#-ATENÇÃO-#-#-#-#-#-#-#-#-#\n");
+        printf("\n-#-#-#-#-#-#-#-#-ATENÇÃO-#-#-#-#-#-#-#-#-#\n");
         printf("Deseja adicionar outro funcionário?\n (1 para sim, 0 para não): ");
         printf("\n-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#\n");
         scanf("%d", &continuar);
         if (continuar != 1) {
            printf("TCHAU\n\n\n");
 
-          printf("Lista de Funcionários:\n");
+          printf("Lista de Funcionários:\n\n");
           break;
         }
     }
@@ -211,7 +211,6 @@ int main(void) {
 
     bubbleSort(funcionarios, tamanho);
 
-    printf("Lista de Funcionários:\n");
     printFuncionarios(funcionarios, tamanho);
 
     return 0;
