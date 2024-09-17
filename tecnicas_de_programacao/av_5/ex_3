@@ -1,0 +1,56 @@
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Pessoa {
+    private String nome;
+    private int diaNascimento;
+    private int mesNascimento;
+    private int anoNascimento;
+    private int idade;
+
+    public Pessoa(String nome, int diaNascimento, int mesNascimento, int anoNascimento) {
+        this.nome = nome;
+        this.diaNascimento = diaNascimento;
+        this.mesNascimento = mesNascimento;
+        this.anoNascimento = anoNascimento;
+        this.idade = 0; // Inicialmente, a idade é 0
+    }
+
+    public void calculaIdade(int diaAtual, int mesAtual, int anoAtual) {
+        LocalDate dataNascimento = LocalDate.of(anoNascimento, mesNascimento, diaNascimento);
+        LocalDate dataAtual = LocalDate.of(anoAtual, mesAtual, diaAtual);
+        Period periodo = Period.between(dataNascimento, dataAtual);
+        this.idade = periodo.getYears();
+    }
+
+    public int informaIdade() {
+        return idade;
+    }
+
+    public String informaNome() {
+        return nome;
+    }
+
+    public void ajustaDataDeNascimento(int dia, int mes, int ano) {
+        this.diaNascimento = dia;
+        this.mesNascimento = mes;
+        this.anoNascimento = ano;
+    }
+
+    public static void main(String[] args) {
+        Pessoa einstein = new Pessoa("Albert Einstein", 14, 3, 1879);
+        Pessoa newton = new Pessoa("Isaac Newton", 4, 1, 1643);
+
+        // Data atual
+        LocalDate hoje = LocalDate.now();
+        int diaAtual = hoje.getDayOfMonth();
+        int mesAtual = hoje.getMonthValue();
+        int anoAtual = hoje.getYear();
+
+        einstein.calculaIdade(diaAtual, mesAtual, anoAtual);
+        newton.calculaIdade(diaAtual, mesAtual, anoAtual);
+
+        System.out.println(einstein.informaNome() + " teria " + einstein.informaIdade() + " anos.");
+        System.out.println(newton.informaNome() + " teria " + newton.informaIdade() + " anos.");
+    }
+}

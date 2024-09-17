@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Triangulo {
+    private double base;
+    private double altura;
+
+    public Triangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+
+    public void lerValores() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite a base do triângulo: ");
+        this.base = scanner.nextDouble();
+        System.out.print("Digite a altura do triângulo: ");
+        this.altura = scanner.nextDouble();
+    }
+
+    public double calcularArea() {
+        return (this.base * this.altura) / 2.0;
+    }
+
+    public static void main(String[] args) {
+        Triangulo triangulo = new Triangulo(0, 0);
+        triangulo.lerValores();
+        double area = triangulo.calcularArea();
+        System.out.println("A área do triângulo é: " + area);
+    }
+}

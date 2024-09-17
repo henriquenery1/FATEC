@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Equacao {
+    private int A;
+    private int B;
+    private int C;
+
+    public Equacao(int A, int B, int C) {
+        this.A = A;
+        this.B = B;
+        this.C = C;
+    }
+
+    public void lerValores() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o valor de A: ");
+        this.A = scanner.nextInt();
+        System.out.print("Digite o valor de B: ");
+        this.B = scanner.nextInt();
+        System.out.print("Digite o valor de C: ");
+        this.C = scanner.nextInt();
+    }
+
+    public void calcularRaizes() {
+        double delta = Math.pow(B, 2) - 4 * A * C;
+        
+        if (A == 0) {
+            System.out.println("O coeficiente A não pode ser zero.");
+            return;
+        }
+
+        if (delta > 0) {
+            double R1 = (-B + Math.sqrt(delta)) / (2 * A);
+            double R2 = (-B - Math.sqrt(delta)) / (2 * A);
+            System.out.println("As raízes são R1 = " + R1 + " e R2 = " + R2);
+        } else if (delta == 0) {
+            double R1 = -B / (2 * A);
+            System.out.println("A raiz é R1 = " + R1);
+        } else {
+            System.out.println("Não existem raízes reais.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Equacao equacao = new Equacao(0, 0, 0);
+        equacao.lerValores();
+        equacao.calcularRaizes();
+    }
+}
